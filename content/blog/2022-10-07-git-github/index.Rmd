@@ -1,0 +1,182 @@
+---
+title: Git与Github交互
+author: Xue Kui
+date: '2022-10-07'
+slug: git-github
+categories:
+  - R
+tags:
+  - Git
+description: ''
+keywords: []
+link: ''
+---
+
+
+### GIT版本控制
+
+[Git download webpage](https://git-scm.com/downloads)
+
+默认选项安装后，输入以下命令完成最后一步
+
+```markdown
+git config --global user.name "Your Name"
+git config --global user.email "email@example.com"
+
+# check your settings
+git config user.name
+git config user.email
+```
+
+- cd (Change directory)   
+如果路径名称存在空格，需使用单引号，比如：c:/'Git Repository'/test
+- `cd ..` (Return to the previous dir)
+- `cd myfile` (Set a sub-dir 'myfile' as new dir based on the current dir)
+- `pwd` (Print wd)
+- mkdir, 即新建一个目录（文件夹），如，`mkdir A`，新建一个文件夹A.
+- `ls` or `dir` 查看当前目录下的文件
+- `rm file`  删除文件
+
+
+1. 创建版本库
+
+版本库，即仓库，Repository，简单可理解成目录。该目录可以被Git管理，每个文件的修改、删除，都可被Git跟踪，以便未来恢复到变动之前的版本。
+
+`git init` 即建库。（自动生成了一个隐藏文件 `.git`）
+
+> 所有的版本控制系统，其实只能跟踪文本文件的改动，比如TXT文件，网页，所有的程序代码等等，Git也不例外。版本控制系统可以告诉你每次的改动，比如在第5行加了一个单词“Linux”，在第8行删了一个单词“Windows”。
+>
+>不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的。如果要真正使用版本控制系统，就要以纯文本方式编写文件。
+>
+>因为文本是有编码的，如果没有历史遗留问题，强烈建议使用标准的UTF-8编码，所有语言使用同一种编码，既没有冲突，又被所有平台所支持。
+
+
+2. 将文件添加到版本库
+
+`git add readme.txt` 添加某一文件；`git add .` 添加目录下的所有文件。
+
+紧接着提交，`git commit -m "wrote a readme file"`。这里，`-m " "` 指的是此次提交的说明，最好是有意义，便于以后在历史记录中找到。
+
+add可多次添加；commit可一次性提交。
+
+```markdown
+git add file1.txt
+git add file2.txt file3.txt
+git commit -m "add 3 files"
+```
+
+3. 修改文件
+
+修改readme.txt文件后，可用`git status`查看仓库当前的状态。命令提示该文件被修改过。
+
+`git diff readme.txt` 可输出修改前后的差异。`git diff HEAD -- readme.txt` 可以查看版本库中最新版本与工作区文件的区别。
+
+我们提交修改后的文件是，依然是两步，先添加再提交，即add和commit两个命令。
+
+
+4. 退回版本
+
+当我们提交过多次后，可用`git log`查看历史记录
+
+- 退回命令为 `git reset --hard HEAD^`。  
+注意：`HEAD`相当于一个指针，可以指向不同的版本。`HEAD`最新的当前版本，`HEAD^`指向上一个版本，`HEAD^^`上上一个，`HEAD~10`退回10个版本。  
+> [出处可见这里](https://www.liaoxuefeng.com/wiki/896043488029600/897013573512192)
+
+- 另外可选择的命令是 `git reset --hard e475af`  
+其中，e475af是版本号（很长一串）的前几位，Git会依此来自动检索并变更版本。
+- 如果找不到版本号，可用 `git reflog`，其记录了每一次的命令。
+
+`cat readme.txt` 可查看变更版本后文件的内容
+
+
+再理解。
+
+- 项目的目录（总文件夹）为工作区
+- 初始化建库 `git init` 后，生成了repository仓库，也就是.git文件。
+  - stage 暂存区；每次`git add`都是将新版本文件添加到暂存区
+  - master 分支；而commit则是将暂存区的内容都提交到当前的分支
+
+1. 我们都是在工作区，新建、编辑和修改文件。
+1. 完成内容后，注意此时文件还在工作区。可`git status`查看状态，比如
+    a. Changes not staged，修改未存到暂存区
+    b. Untracked file，文件未被“追踪”
+1. 使用`git add`命令将新版本文件逐一添加到暂存区 (图Stage)
+1. 使用`git commit -m " "`提交到分支 (图Commit)，提交完成后，暂存区变空白。
+
+![Add file to stage in local repo](images/gitstage.png)
+
+![Commit all the files in stage area](images/gitcommit.png)
+
+
+
+**到此，本地仓库构建完毕**
+
+
+5. 撤销工作区的修改，`git checkout -- file`
+
+- 如果我们改乱了文件，且修改的文件未放到暂存区，想丢弃工作区的修改。撤销修改可以回到和版本库一模一样的状态；
+- 如果存到了暂存区，就需要多做一步，先 `git reset HEAD readme.txt` 把暂存区内容**打回退到工作区**，再`git checkout -- file` 扔掉修改。
+
+
+6. 删除文件
+
+我们可以手动删除或`rm file`删除工作区的文件。但仓库里面的版本还在。如果确要删去仓库中的，先`git rm test.txt`，再提交`git commit -m "remove test file"`。
+
+假使该文件是误删，由于仓库里还有该文件，故可以找回。因为删除也是一个修改动作，我们想撤销删除，则运行 `git checkout -- test.txt`。
+
+> git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。
+
+7. 远程仓库
+
+a. 创建SSH Key。（Windows下打开Git Bash  
+`ssh-keygen -t rsa -C "your email"` 得到一对秘钥，其中，.pub扩展名是公开秘钥。
+a. Github -> Settings -> SSH and GPG keys -> New SSH key。Title任意，Key一栏填写.pub文件的内容
+
+
+
+Github托管本地仓库内容，作为一个备份。步骤如下：
+
+- 构建本地库（init, add, commit）
+- 新建Github远程仓库，Create a new repo -> Repo name -> Create repo。（注意把默认分支branch改为master）。复制仓库的SSH链接。  
+注：Git支持多种协议，包括https，但SSH协议速度最快。
+- 在Git中运行 `git remote add origin 复制的SSH`，将本地库与远程库关联。
+- 将本地库的所有内容推送到远程库上，`git push -u origin master`，实际上是把当前分支master推送到远程。  
+！！！这里注意，新建的远程仓库是空的，第一次推送分支时要加上-u这个参数；等远程仓库有了内容之后，每次本地提交后，就可以使用命令 `git push origin master`，把本地master分支的**最新修改推送至GitHub**。
+
+
+> -u 参数可以在推送上传的同时，还将远程origin仓库的master分支设置为本地仓库当前分支的upstream（上游），将两个分支关联了起来。添加了这个参数，将来运行git pull命令从远程仓库获取内容时，本地仓库的这个分支就可以直接从远程origin的master分支获取内容，省去了另外添加参数的麻烦。这个参数也只用在第一次push时加上，以后直接运行 git push 命令即可。
+> [参见此处](https://blog.csdn.net/ourstronger/article/details/101059246)
+
+
+**其他远程库相关操作**
+
+
+上面步骤已将本地库与远程库进行了关联 `git remote add origin`，其中，origin是远程库的默认名称。
+
+i. 如果我们想解除关联，建议先使用 `git remote -v` 查看远程库信息；再根据名字取消关联，如解耦origin，`git remote rm origin`。
+
+i. 如果要删除远程库，需要登录到GitHub，在后台页面删除。
+
+i. 要克隆一个仓库，首先必须知道仓库的地址，然后使用 `git clone` 命令克隆。
+
+
+
+8. 分支管理
+
+`git branch` 查看当前分支；`git branch dev` 创建新的分支dev；
+
+`git switch dev` 切换到dev分支；
+
+`git switch -c dev` 创建并切换到新的分支，dev。
+
+`git branch -d dev` 删除dev分支；
+
+切换到dev分支后，随后所有的修改提交都是提交到dev分支（其时间线越来越长）。当dev分支工作完成后，我们切换到master分支。并使用 `git merge dev` 将dev的工作成果合并到当前的master分支。注意，该合并直接把master指向了dev的当前提交。也就是滞后、落后版本的master，跳跃（指向）到了dev的最新版本。
+
+
+
+
+
+
+
+

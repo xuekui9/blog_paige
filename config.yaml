@@ -1,8 +1,8 @@
 author:
-  email: example@example.com
-  name: Michael Bluth
-baseurl: https://example.com
-copyright: © Michael Bluth
+  email: wsgwhym@163.com
+  name: Kui Xue
+baseurl: https://xuekui.site/
+copyright: © Kui Xue
 languagecode: en-us
 enablerobotstxt: true
 markup:
@@ -57,5 +57,11 @@ social:
   youtube: https://www.youtube.com/user/example
 theme: "paige"
 timezone: America/Los_Angeles
-title: No Borders, No Limits
+title: Kui Xue丨薛奎
 titlecasestyle: Go
+ignoreFiles:
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _cache$
+  - \.knit\.md$
+  - \.utf8\.md$
