@@ -100,8 +100,8 @@ git commit -m "add 3 files"
 1. 完成内容后，注意此时文件还在工作区。可`git status`查看状态，比如
     a. Changes not staged，修改未存到暂存区
     b. Untracked file，文件未被“追踪”
-1. 使用`git add`命令将新版本文件逐一添加到暂存区 (图Stage)
-1. 使用`git commit -m " "`提交到分支 (图Commit)，提交完成后，暂存区变空白。
+1. 使用`git add`命令将新版本文件逐一添加到暂存区
+1. 使用`git commit -m " "`提交到分支，提交完成后，暂存区变空白。
 
 ![Add file to stage in local repo](images/gitstage.png)
 
