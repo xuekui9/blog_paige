@@ -152,4 +152,26 @@ git commit -m &quot;add 3 files&quot;</code></pre>
 <p><code>git switch -c dev</code> 创建并切换到新的分支，dev。</p>
 <p><code>git branch -d dev</code> 删除dev分支；</p>
 <p>切换到dev分支后，随后所有的修改提交都是提交到dev分支（其时间线越来越长）。当dev分支工作完成后，我们切换到master分支。并使用 <code>git merge dev</code> 将dev的工作成果合并到当前的master分支。注意，该合并直接把master指向了dev的当前提交。也就是滞后、落后版本的master，跳跃（指向）到了dev的最新版本。</p>
+<p>Blogdown can build the website locally and generate <code>public/</code> meanwhile.</p>
+<p>If we expect that the website is deployed continuously, we should skip the step of <code>blogdown::build_site()</code> because the website will be automatically built on Netlify. This also means <code>public/</code> can be ignored. We do not need to commit <code>public/</code> directory to GIT repo each time. Instead adding <code>public/</code> to <code>.gitignore</code> file.</p>
+<p>A recommended setting in .gitignore to ignore these files:</p>
+<pre class="markdown"><code>.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+/blogdown/
+/public/
+Thumbs.db
+.DS_Store
+.hugo_build.lock</code></pre>
+<p>Note that!!! the files committed to GIT will be continuously tracked and <code>.gitignore</code> only works for those untracked files. Once something else has been under control version, it would result in an invalidation of <code>.gitignore</code>.</p>
+<p>这时候我们应先把本地缓存删除，然后再提交时就不会出现要被忽略的文件了。(清除GIT本地缓存，改成untrack状态)</p>
+<pre class="markdown"><code># 删除在暂存区中的缓存
+git rm -r --cached .
+
+# 重新提交
+git add .
+git commit -m &#39;update&#39;</code></pre>
+<p><a href="https://zhuanlan.zhihu.com/p/102890728">如何删除Github远程仓库中那些已被上传的.gitignore文件，而保留本地文件?</a></p>
+<p>在使用GIT和Github的时候，之前没有写.gitignore文件，就上传了一些没有必要的文件。由于那些文件已经处于版本管理状态，此时指定.gitignore对该些文件无法生效。可以使用 “git rm -r –cached directory” 来删除缓冲，然后进行”commit”和”push”，远程仓库不必要的文件被删除。</p>
 </div>

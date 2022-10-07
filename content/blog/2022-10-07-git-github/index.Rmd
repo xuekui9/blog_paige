@@ -178,6 +178,46 @@ i. 要克隆一个仓库，首先必须知道仓库的地址，然后使用 `git
 
 
 
+Blogdown can build the website locally and generate `public/` meanwhile.
+
+If we expect that the website is deployed continuously, we should skip the step of `blogdown::build_site()` because the website will be automatically built on Netlify. This also means `public/` can be ignored. We do not need to commit `public/` directory to GIT repo each time. Instead adding `public/` to `.gitignore` file.
+
+A recommended setting in .gitignore to ignore these files:
+
+```markdown
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+/blogdown/
+/public/
+Thumbs.db
+.DS_Store
+.hugo_build.lock
+```
+
+Note that!!! the files committed to GIT will be continuously tracked and `.gitignore` only works for those untracked files. Once something else has been under control version, it would result in an invalidation of `.gitignore`.
+
+这时候我们应先把本地缓存删除，然后再提交时就不会出现要被忽略的文件了。(清除GIT本地缓存，改成untrack状态)
+
+```markdown
+# 删除在暂存区中的缓存
+git rm -r --cached .
+
+# 重新提交
+git add .
+git commit -m 'update'
+```
+
+
+[如何删除Github远程仓库中那些已被上传的.gitignore文件，而保留本地文件?](https://zhuanlan.zhihu.com/p/102890728)
+
+在使用GIT和Github的时候，之前没有写.gitignore文件，就上传了一些没有必要的文件。由于那些文件已经处于版本管理状态，此时指定.gitignore对该些文件无法生效。可以使用 "git rm -r –cached directory" 来删除缓冲，然后进行"commit"和"push"，远程仓库不必要的文件被删除。
+
+
+
+
+
 
 
 
