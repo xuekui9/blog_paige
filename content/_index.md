@@ -5,7 +5,7 @@ blurb: <p class="lead">There's a new daddy in town. A discipline daddy. If I mak
   is for sand racing. We'll have to find something to do so that people can look at
   you without wanting to kill themselves.</p><p class="lead"><a href="https://github.com/willfaught/paige">A
   simple Hugo theme.</a></p>
-description: Go ahead, touch the Cornballer
-greeting: You know [best](https://bluthipsum.com)
-title: No Borders, No Limits
+description: 路在脚下，心向远方
+greeting: Kui Xue
+
 ---
