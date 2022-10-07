@@ -97,7 +97,7 @@ git commit -m "add 3 files"
   - master 分支；而commit则是将暂存区的内容都提交到当前的分支
 
 1. 我们都是在工作区，新建、编辑和修改文件。
-1. 完成内容后，注意此时文件还在工作区。可`git status`查看状态，比如
+1. 完成内容后，注意此时文件还在工作区。可`git status`查看状态，比如：
     a. Changes not staged，修改未存到暂存区
     b. Untracked file，文件未被“追踪”
 1. 使用`git add`命令将新版本文件逐一添加到暂存区
