@@ -46,15 +46,8 @@ permalinks:
   blog: /blog/:year/:month/:day/:title/
 social:
   envelope: mailto:example@example.com
-  discord: http://discord.com/users/example
   github: https://github.com/example
-  facebook: https://facebook.com/example
-  instagram: https://instagram.com/example
-  linkedin: https://www.linkedin.com/in/example
-  reddit: https://reddit.com/u/example
-  twitch: https://www.twitch.tv/example
   twitter: https://twitter.com/example
-  youtube: https://www.youtube.com/user/example
 theme: "paige"
 timezone: America/Los_Angeles
 title: Kui Xue丨薛奎
