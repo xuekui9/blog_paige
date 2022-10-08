@@ -10,7 +10,15 @@ markup:
     renderer:
       unsafe: true
   highlight:
-    style: vs
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: true
+    style: native
+    tabWidth: 4
 menu:
   main:
   - identifier: home
@@ -25,10 +33,6 @@ menu:
     name: Blog
     weight: 30
     url: /blog/
-  - identifier: articles
-    name: Articles
-    weight: 40
-    url: /articles/
   - identifier: projects
     name: Projects
     weight: 50

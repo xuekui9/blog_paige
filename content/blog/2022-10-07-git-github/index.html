@@ -149,7 +149,7 @@ git commit -m &quot;add 3 files&quot;</code></pre>
 </ol>
 <p><code>git branch</code> 查看当前分支；<code>git branch dev</code> 创建新的分支dev；</p>
 <p><code>git switch dev</code> 切换到dev分支；</p>
-<p><code>git switch -c dev</code> 创建并切换到新的分支，dev;</p>
+<p><code>git switch -c dev</code> 创建并切换到新的分支，dev;;</p>
 <p><code>git branch -d dev</code> 删除dev分支；</p>
 <p>切换到dev分支后，随后所有的修改提交都是提交到dev分支（其时间线越来越长）。当dev分支工作完成后，我们切换到master分支。并使用 <code>git merge dev</code> 将dev的工作成果合并到当前的master分支。注意，该合并直接把master指向了dev的当前提交。也就是滞后、落后版本的master，跳跃（指向）到了dev的最新版本。</p>
 <p>Blogdown can build the website locally and generate <code>public/</code> meanwhile.</p>
