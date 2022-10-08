@@ -58,7 +58,3 @@ ignoreFiles:
   - _cache$
   - \.knit\.md$
   - \.utf8\.md$
-parms:
-    avatar:
-        local: true
-        src: touxiang.jpg
