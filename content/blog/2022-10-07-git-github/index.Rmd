@@ -170,7 +170,7 @@ i. 要克隆一个仓库，首先必须知道仓库的地址，然后使用 `git
 
 `git switch dev` 切换到dev分支；
 
-`git switch -c dev` 创建并切换到新的分支，dev。
+`git switch -c dev` 创建并切换到新的分支，dev;
 
 `git branch -d dev` 删除dev分支；
 
