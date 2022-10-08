@@ -59,7 +59,6 @@ ignoreFiles:
   - \.knit\.md$
   - \.utf8\.md$
 parms:
-  sidebar:
     avatar:
         local: true
         src: touxiang.jpg
