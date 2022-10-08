@@ -21,7 +21,7 @@
         <div class="d-flex justify-content-evenly align-items-center row">
             <div class="col-12 col-md-6">
                 <p class="display-5 fw-bold lh-1">{{ .Params.greeting | markdownify }}</p>
-                <p class="lead" style="color:blue">{{ .Params.blurb | markdownify }}</p>
+                <p class="lead" style="color:blue;">{{ .Params.blurb | markdownify }}</p>
             </div>
             <div class="col-12 col-md-6 text-center">
                 <img alt="Avatar" class="img-fluid rounded-4" src="{{ .Site.BaseURL }}/avatar.jpg" style="max-height:20rem">
