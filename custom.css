@@ -29,7 +29,7 @@ blockquote {
 }
 
 
- h2, h3, h4 {
+h1, h2, h3, h4 {
   color: #a1b70d;
   font-weight: bold;
 }
@@ -55,17 +55,4 @@ pre code {
   font-family: "Lucida Console", SimHei, Monaco, monospace;
 }
 
-
-/* Auto Numbering */
-body {counter-reset: h2}
-h2 {counter-reset: h3}
-h3 {counter-reset: h4}
-h4 {counter-reset: h5}
-
-article[autonumbering] h2:before {counter-increment: h2; content: counter(h2) " "}
-article[autonumbering] h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) " "}
-article[autonumbering] h4:before {counter-increment: h4; content: counter(h2) "." counter(h3) "." counter(h4) " "}
-
-article[autonumbering] .toc__menu ul { counter-reset: item }
-article[autonumbering] .toc__menu li a:before { content: counters(item, ".") ". "; counter-increment: item }
 

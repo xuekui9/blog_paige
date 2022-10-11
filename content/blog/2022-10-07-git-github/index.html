@@ -10,13 +10,13 @@ tags:
 description: ''
 keywords: []
 link: ''
+autonumbering: true
 ---
 
 
 
-<div id="git版本控制" class="section level3">
-<h3>GIT版本控制</h3>
-<p>这次为什么成功了。</p>
+<div id="git版本控制" class="section level2">
+<h2>GIT版本控制</h2>
 <p><a href="https://git-scm.com/downloads">Git download webpage</a></p>
 <p>默认选项安装后，输入以下命令完成最后一步</p>
 <pre class="markdown"><code>git config --global user.name &quot;Your Name&quot;
@@ -35,9 +35,8 @@ git config user.email</code></pre>
 <li><code>ls</code> or <code>dir</code> 查看当前目录下的文件</li>
 <li><code>rm file</code> 删除文件</li>
 </ul>
-<ol style="list-style-type: decimal">
-<li>创建版本库</li>
-</ol>
+<div id="创建版本库" class="section level3">
+<h3>创建版本库</h3>
 <p>版本库，即仓库，Repository，简单可理解成目录。该目录可以被Git管理，每个文件的修改、删除，都可被Git跟踪，以便未来恢复到变动之前的版本。</p>
 <p><code>git init</code> 即建库。（自动生成了一个隐藏文件 <code>.git</code>）</p>
 <blockquote>
@@ -45,24 +44,24 @@ git config user.email</code></pre>
 <p>不幸的是，Microsoft的Word格式是二进制格式，因此，版本控制系统是没法跟踪Word文件的改动的。如果要真正使用版本控制系统，就要以纯文本方式编写文件。</p>
 <p>因为文本是有编码的，如果没有历史遗留问题，强烈建议使用标准的UTF-8编码，所有语言使用同一种编码，既没有冲突，又被所有平台所支持。</p>
 </blockquote>
-<ol start="2" style="list-style-type: decimal">
-<li>将文件添加到版本库</li>
-</ol>
+</div>
+<div id="将文件添加到版本库" class="section level3">
+<h3>将文件添加到版本库</h3>
 <p><code>git add readme.txt</code> 添加某一文件；<code>git add .</code> 添加目录下的所有文件。</p>
 <p>紧接着提交，<code>git commit -m "wrote a readme file"</code>。这里，<code>-m " "</code> 指的是此次提交的说明，最好是有意义，便于以后在历史记录中找到。</p>
 <p>add可多次添加；commit可一次性提交。</p>
 <pre class="markdown"><code>git add file1.txt
 git add file2.txt file3.txt
 git commit -m &quot;add 3 files&quot;</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>修改文件</li>
-</ol>
+</div>
+<div id="修改文件" class="section level3">
+<h3>修改文件</h3>
 <p>修改readme.txt文件后，可用<code>git status</code>查看仓库当前的状态。命令提示该文件被修改过。</p>
 <p><code>git diff readme.txt</code> 可输出修改前后的差异。<code>git diff HEAD -- readme.txt</code> 可以查看版本库中最新版本与工作区文件的区别。</p>
 <p>我们提交修改后的文件是，依然是两步，先添加再提交，即add和commit两个命令。</p>
-<ol start="4" style="list-style-type: decimal">
-<li>退回版本</li>
-</ol>
+</div>
+<div id="退回版本" class="section level3">
+<h3>退回版本</h3>
 <p>当我们提交过多次后，可用<code>git log</code>查看历史记录</p>
 <ul>
 <li><p>退回命令为 <code>git reset --hard HEAD^</code>。<br />
@@ -73,7 +72,10 @@ git commit -m &quot;add 3 files&quot;</code></pre>
 <li><p>如果找不到版本号，可用 <code>git reflog</code>，其记录了每一次的命令。</p></li>
 </ul>
 <p><code>cat readme.txt</code> 可查看变更版本后文件的内容</p>
-<p>再理解。</p>
+</div>
+</div>
+<div id="再理解" class="section level2">
+<h2>再理解</h2>
 <ul>
 <li>项目的目录（总文件夹）为工作区</li>
 <li>初始化建库 <code>git init</code> 后，生成了repository仓库，也就是.git文件。
@@ -101,24 +103,24 @@ git commit -m &quot;add 3 files&quot;</code></pre>
 <p class="caption">Commit all the files in stage area</p>
 </div>
 <p><strong>到此，本地仓库构建完毕</strong></p>
-<ol start="5" style="list-style-type: decimal">
-<li>撤销工作区的修改，<code>git checkout -- file</code></li>
-</ol>
+<div id="撤销工作区的修改" class="section level3">
+<h3>撤销工作区的修改</h3>
+<p><code>git checkout -- file</code></p>
 <ul>
 <li>如果我们改乱了文件，且修改的文件未放到暂存区，想丢弃工作区的修改。撤销修改可以回到和版本库一模一样的状态；</li>
 <li>如果存到了暂存区，就需要多做一步，先 <code>git reset HEAD readme.txt</code> 把暂存区内容<strong>打回退到工作区</strong>，再<code>git checkout -- file</code> 扔掉修改。</li>
 </ul>
-<ol start="6" style="list-style-type: decimal">
-<li>删除文件</li>
-</ol>
+</div>
+<div id="删除文件" class="section level3">
+<h3>删除文件</h3>
 <p>我们可以手动删除或<code>rm file</code>删除工作区的文件。但仓库里面的版本还在。如果确要删去仓库中的，先<code>git rm test.txt</code>，再提交<code>git commit -m "remove test file"</code>。</p>
 <p>假使该文件是误删，由于仓库里还有该文件，故可以找回。因为删除也是一个修改动作，我们想撤销删除，则运行 <code>git checkout -- test.txt</code>。</p>
 <blockquote>
 <p>git checkout其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</p>
 </blockquote>
-<ol start="7" style="list-style-type: decimal">
-<li>远程仓库</li>
-</ol>
+</div>
+<div id="远程仓库" class="section level3">
+<h3>远程仓库</h3>
 <ol style="list-style-type: lower-alpha">
 <li>创建SSH Key。（Windows下打开Git Bash<br />
 <code>ssh-keygen -t rsa -C "your email"</code> 得到一对秘钥，其中，.pub扩展名是公开秘钥。</li>
@@ -144,9 +146,9 @@ git commit -m &quot;add 3 files&quot;</code></pre>
 <li><p>如果要删除远程库，需要登录到GitHub，在后台页面删除。</p></li>
 <li><p>要克隆一个仓库，首先必须知道仓库的地址，然后使用 <code>git clone</code> 命令克隆。</p></li>
 </ol>
-<ol start="8" style="list-style-type: decimal">
-<li>分支管理</li>
-</ol>
+</div>
+<div id="分支管理" class="section level3">
+<h3>分支管理</h3>
 <p><code>git branch</code> 查看当前分支；<code>git branch dev</code> 创建新的分支dev；</p>
 <p><code>git switch dev</code> 切换到dev分支；</p>
 <p><code>git switch -c dev</code> 创建并切换到新的分支，dev;;</p>
@@ -174,4 +176,5 @@ git add .
 git commit -m &#39;update&#39;</code></pre>
 <p><a href="https://zhuanlan.zhihu.com/p/102890728">如何删除Github远程仓库中那些已被上传的.gitignore文件，而保留本地文件?</a></p>
 <p>在使用GIT和Github的时候，之前没有写.gitignore文件，就上传了一些没有必要的文件。由于那些文件已经处于版本管理状态，此时指定.gitignore对该些文件无法生效。可以使用 “git rm -r –cached directory” 来删除缓冲，然后进行”commit”和”push”，远程仓库不必要的文件被删除。</p>
+</div>
 </div>

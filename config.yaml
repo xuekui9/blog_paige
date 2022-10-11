@@ -11,13 +11,10 @@ markup:
       unsafe: true
   highlight:
     codeFences: true
-    guessSyntax: false
     hl_Lines: ""
-    lineNoStart: 1
-    lineNos: false
     lineNumbersInTable: true
     noClasses: true
-    style: native
+    style: monokai
     tabWidth: 4
 menu:
   main:
@@ -45,7 +42,7 @@ menu:
     name: Tags
     weight: 70
     url: /tags/
-paginate: 50
+paginate: 30
 permalinks:
   blog: /blog/:year/:month/:day/:title/
 social:
