@@ -36,7 +36,6 @@ blockquote {
 
 /* 改间距，先调代码，再调整正文 */
 body {
-  max-width: 800px;
   margin: auto;
   padding: 1em;
   line-height: 1.75em;
