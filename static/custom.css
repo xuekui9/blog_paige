@@ -1,0 +1,21 @@
+/* code */
+/* pre block chunk */
+pre {
+  border: 1px solid #ddd;
+  box-shadow: 5px 5px 5px #eee;
+  padding: 1em;
+  overflow-x: auto;
+  font-size: 16px;
+  background: #f8f8f8;
+}
+code { font-size: 18px; 
+   color: #dc264f; 
+   background: #f8f8f8;
+   padding: .1em .3em;}
+pre code { background: none; }
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 5px solid #a1b70d;
+  padding: 1em 1em 3px 1em;
+}
