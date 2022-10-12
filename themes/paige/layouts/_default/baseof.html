@@ -14,6 +14,9 @@
         <meta content="width=device-width, initial-scale=1" name="viewport">
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/twitter_cards.html" . }}
+        {{ if and .Site.Title .IsHome }}
+        <title>{{ .Site.Title | markdownify | plainify | htmlUnescape }}</title>
+        {{ end }}
         {{ if and (and .Title .Site.Title) (or (not (eq .Title .Site.Title)) (not .IsHome)) }}
         <title>{{ .Title | markdownify | plainify | htmlUnescape }} &middot; {{ .Site.Title | markdownify | plainify | htmlUnescape }}</title>
         {{ else if .Title }}
