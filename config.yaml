@@ -49,7 +49,7 @@ paginate: 30
 permalinks:
   blog: /blog/:year/:month/:day/:title/
 social:
-  envelope: wsgwhym@163.com
+  envelope: mailto:wsgwhym@163.com
   github: https://github.com/xuekui9
   twitter: https://twitter.com/xuekui9
 theme: "paige"
