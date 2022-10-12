@@ -17,7 +17,7 @@ markup:
     hl_Lines: ""
     lineNumbersInTable: true
     noClasses: true
-    style: monokai
+    style: vs
     tabWidth: 4
 menu:
   main:
