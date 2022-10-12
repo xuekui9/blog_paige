@@ -11,7 +11,7 @@ pre {
 /* inline-code */
 code { 
    font-size: 18px; 
-   color: #c7254e; 
+   color: #e64626; 
    background: #f9f2f4;
    padding: 2px 4px;
 }
@@ -29,10 +29,17 @@ blockquote {
 }
 
 
- h2, h3, h4 {
+h2, h3, h4 {
   color: #728302;
   font-weight: bold;
 }
+
+
+/* link */
+
+/* footer link */ 
+.text-muted a{color:var(--bs-link-color);text-decoration:none}
+
 
 /* 改间距，先调代码，再调整正文 */
 body {

@@ -2,7 +2,10 @@ author:
   email: wsgwhym@163.com
   name: Kui Xue
 baseurl: https://xuekui.site/
-copyright: © Kui Xue
+copyright: 
+  © Kui Xue. 
+  Powered by the [paige theme](https://github.com/willfaught/paige)
+  for [Hugo](https://gohugo.io/).
 languagecode: en-us
 enablerobotstxt: true
 markup:
@@ -46,11 +49,11 @@ paginate: 30
 permalinks:
   blog: /blog/:year/:month/:day/:title/
 social:
-  envelope: mailto:example@example.com
-  github: https://github.com/example
-  twitter: https://twitter.com/example
+  envelope: wsgwhym@163.com
+  github: https://github.com/xuekui9
+  twitter: https://twitter.com/xuekui9
 theme: "paige"
-timezone: America/Los_Angeles
+timezone: Asia/Shanghai
 title: Kui Xue丨薛奎
 titlecasestyle: Go
 ignoreFiles:
