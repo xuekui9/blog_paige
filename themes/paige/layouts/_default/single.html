@@ -9,7 +9,7 @@
     <header>
         <div class="justify-content-center row">
             <div class="col col-auto text-center">
-                <div style="max-width:80ch">
+                <div style="max-width:100ch">
                     {{ if .Title }}
                     <h1 class="display-5 fw-bold">
                         {{ if .Params.link }}
@@ -33,7 +33,7 @@
     {{ if .Content }}
     <div class="justify-content-center row">
         <div class="col col-auto">
-            <div>
+            <div style="max-width:80ch">>
                 {{ .Content }}
             </div>
         </div>
