@@ -35,7 +35,7 @@ git config user.name
 git config user.email
 ```
 
-- cd (Change directory)   
+- cd (Change directory)  
 如果路径名称存在空格，需使用单引号，比如：c:/'Git Repository'/test
 - `cd ..` (Return to the previous dir)
 - `cd myfile` (Set a sub-dir 'myfile' as new dir based on the current dir)
