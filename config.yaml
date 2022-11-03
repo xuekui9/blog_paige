@@ -27,7 +27,7 @@ menu:
     url: /
   - identifier: about
     name: About
-    weight: 20
+    weight: 71
     url: /about/
   - identifier: blog
     name: Blog
@@ -35,7 +35,7 @@ menu:
     url: /blog/
   - identifier: myphoto
     name: Photos
-    weight: 40
+    weight: 29
     url: /myphoto/
   - identifier: projects
     name: Projects
