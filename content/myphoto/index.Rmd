@@ -1,0 +1,24 @@
+---
+title: My footprints
+author: Xue Kui
+date: '2022-11-04'
+slug: myph
+categories: []
+tags: []
+description: '遇见'
+keywords: []
+link: ''
+---
+
+**I love three things in this world.**
+
+**The sun, the moon and you.**
+
+**The sun for the day, the moon for the night , and you forever.**
+
+浮世三千，吾爱有三。日，月与卿。日为朝，月为暮，卿为朝朝暮暮。
+
+.12
+
+![](images/微信图片_20221102023730.jpg){width=100%}
+

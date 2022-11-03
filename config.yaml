@@ -1,7 +1,7 @@
 author:
   email: wsgwhym@163.com
   name: Kui Xue
-baseurl: https://xuekui.site/
+baseurl: https://xuekui.site
 copyright: 
   © Kui Xue. 
   Powered by the [paige theme](https://github.com/willfaught/paige)
@@ -33,6 +33,10 @@ menu:
     name: Blog
     weight: 30
     url: /blog/
+  - identifier: myphoto
+    name: Photos
+    weight: 40
+    url: /myphoto/
   - identifier: projects
     name: Projects
     weight: 50
