@@ -50,7 +50,7 @@ The unexpected but extremely important consequence if you go the extra step
 
 >If the site has a static directory (even an empty one), and you run hugo server, the error will appear whenever you modify the site configuration.
 
-最后提到"0.104.2 fixed this issue"。原来是一个Bug，已经被修复了。更新Hugo版本就好了。
+最后提到"0.104.2 fixed this issue"。竟然是Bug，已经被修复。更新Hugo版本就好了。
 
 **Related github issues:**
 
