@@ -1,0 +1,25 @@
+---
+title: Why from scratch
+author: Xue Kui
+date: '2022-11-15'
+slug: why-from-scratch
+categories:
+  - R
+tags: []
+description: ''
+keywords: []
+link: ''
+---
+
+
+## 为什么要系统学习R
+
+啊
+
+
+
+
+
+
+
+

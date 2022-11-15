@@ -6,7 +6,7 @@ slug: ''
 categories: []
 tags:
   - html
-description: '**The unexpected but extremely important consequence if you go the extra step**'
+description: 'The unexpected but extremely important consequence if you go the extra step'
 keywords: []
 link: ''
 ---
