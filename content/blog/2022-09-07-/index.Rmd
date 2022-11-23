@@ -2,7 +2,7 @@
 title: 你想成为谁
 author: Xue Kui
 date: '2022-11-18'
-slug: ''
+slug: who-want-be
 categories:
   - 心情
 tags: []

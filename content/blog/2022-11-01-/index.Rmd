@@ -2,7 +2,7 @@
 title: 相聚有时
 author: Xue Kui
 date: '2022-11-01'
-slug: ''
+slug: be-together
 categories: []
 tags: []
 description: ''

@@ -51,7 +51,7 @@ menu:
     url: /tags/
 paginate: 30
 permalinks:
-  blog: /blog/:year/:month/:day/:title/
+  blog: /blog/:year/:month/:slug/
 social:
   envelope: mailto:wsgwhym@163.com
   github: https://github.com/xuekui9
