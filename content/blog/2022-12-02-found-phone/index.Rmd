@@ -11,7 +11,11 @@ keywords: []
 link: ''
 ---
 
-<div style="display:none;"><img src="images/ios-16-featured-image-1.jpg" alt=""></div>
+<head>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='/images/ios-16-featured-image-1.jpg' />
+</div>
+</head>
 
 
 
