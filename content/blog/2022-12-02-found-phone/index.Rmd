@@ -11,6 +11,7 @@ keywords: []
 link: ''
 ---
 
+![](images/android-chrome-192x192.png)
 
 跟李琦兄一拍即合去吃旋转小火锅。
 
