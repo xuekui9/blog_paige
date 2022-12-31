@@ -1,18 +1,18 @@
 ---
-title: 你想成为谁
+title: 一张自拍
 author: Xue Kui
-date: '2022-11-18'
-slug: who-want-be
+date: '2022-09-07'
 categories:
   - 心情
-tags: []
-description: ''
-keywords: []
-link: ''
+slug: who-want-be
+description: '在去核酸的路上'
 ---
 
-**“执着和专注才是我们一生的必修课”**
 
-<br>
+
+出门的时候惊艳一点，工作的时候专注一点，独处的时候高冷一点，享受的时候激情一点
+
+> **“执着和专注才是我们一生的必修课”**
+
 
 ![](images/IMG_1799.JPG){width=100%}
