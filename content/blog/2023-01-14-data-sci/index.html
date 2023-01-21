@@ -1,0 +1,267 @@
+---
+title: Data Science
+author: ''
+date: '2023-01-14'
+slug: data-sci
+categories:
+  - R
+tags: []
+description: ''
+keywords: []
+link: ''
+---
+
+
+
+<div id="分组操作" class="section level3">
+<h3>分组操作</h3>
+<p>批量t检验</p>
+<pre class="r"><code>library(tidyverse)
+library(rstatix)
+df = read_csv(&quot;F:/Learning_materials/R/正则/Demo_t.test.csv&quot;)
+df
+## # A tibble: 38 × 7
+##    compoundID case_1 case_2 case_3 control_1 control_2 control_3
+##    &lt;chr&gt;       &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+##  1 com_001       485    154    268       350       432       425
+##  2 com_002       208    372    219       457       324       392
+##  3 com_003       219    125    345       473       480       403
+##  4 com_004       289    356    116       489       376       500
+##  5 com_005       248    456    279       457       426       436
+##  6 com_006       323    142    462       451       354       452
+##  7 com_007       259    148    374       397       346       383
+##  8 com_008       428    262    226       436       499       308
+##  9 com_009       327    494    244       316       368       401
+## 10 com_010       480    343    495       383       471       387
+## # … with 28 more rows
+df= df %&gt;% 
+  pivot_longer(-1, names_pattern = &quot;(.*)_&quot;, names_to = c(&quot;.value&quot;)) %&gt;% 
+  pivot_longer(-1, names_to = &quot;trt&quot;, values_to = &quot;val&quot;)
+df
+## # A tibble: 228 × 3
+##    compoundID trt       val
+##    &lt;chr&gt;      &lt;chr&gt;   &lt;dbl&gt;
+##  1 com_001    case      485
+##  2 com_001    control   350
+##  3 com_001    case      154
+##  4 com_001    control   432
+##  5 com_001    case      268
+##  6 com_001    control   425
+##  7 com_002    case      208
+##  8 com_002    control   457
+##  9 com_002    case      372
+## 10 com_002    control   324
+## # … with 218 more rows
+df %&gt;% 
+  group_by(compoundID) %&gt;% 
+  t_test(val ~ trt, detailed = TRUE)
+## # A tibble: 38 × 16
+##    compoundID estimate estimate1 estim…¹ .y.   group1 group2    n1    n2 stati…²
+##  * &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;
+##  1 com_001     -100         302.    402. val   case   contr…     3     3 -0.994 
+##  2 com_002     -125.        266.    391  val   case   contr…     3     3 -1.91  
+##  3 com_003     -222.        230.    452  val   case   contr…     3     3 -3.25  
+##  4 com_004     -201.        254.    455  val   case   contr…     3     3 -2.46  
+##  5 com_005     -112         328.    440. val   case   contr…     3     3 -1.71  
+##  6 com_006     -110         309     419  val   case   contr…     3     3 -1.12  
+##  7 com_007     -115         260.    375. val   case   contr…     3     3 -1.72  
+##  8 com_008     -109         305.    414. val   case   contr…     3     3 -1.30  
+##  9 com_009       -6.67      355     362. val   case   contr…     3     3 -0.0859
+## 10 com_010       25.7       439.    414. val   case   contr…     3     3  0.456 
+## # … with 28 more rows, 6 more variables: p &lt;dbl&gt;, df &lt;dbl&gt;, conf.low &lt;dbl&gt;,
+## #   conf.high &lt;dbl&gt;, method &lt;chr&gt;, alternative &lt;chr&gt;, and abbreviated variable
+## #   names ¹​estimate2, ²​statistic</code></pre>
+<p>根据cyl列可将数据分为3组，分组修改数据框，使用<code>group_modify</code></p>
+<blockquote>
+<p>group_modify() returns a grouped tibble. In that case .f must return a data frame.</p>
+</blockquote>
+<ol style="list-style-type: decimal">
+<li>计算每组中所有变量的最小值</li>
+<li>并将结果分别添加在各组的最后面</li>
+</ol>
+<pre class="r"><code>df= mtcars[2:10, 1:4] 
+df
+##                    mpg cyl  disp  hp
+## Mazda RX4 Wag     21.0   6 160.0 110
+## Datsun 710        22.8   4 108.0  93
+## Hornet 4 Drive    21.4   6 258.0 110
+## Hornet Sportabout 18.7   8 360.0 175
+## Valiant           18.1   6 225.0 105
+## Duster 360        14.3   8 360.0 245
+## Merc 240D         24.4   4 146.7  62
+## Merc 230          22.8   4 140.8  95
+## Merc 280          19.2   6 167.6 123
+unique(df$cyl) # cyl, has 3 levels
+## [1] 6 4 8
+df %&gt;% 
+  group_by(cyl) %&gt;% 
+  summarise(across(.fns = min))
+## # A tibble: 3 × 4
+##     cyl   mpg  disp    hp
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     4  22.8   108    62
+## 2     6  18.1   160   105
+## 3     8  14.3   360   175
+df %&gt;% 
+  group_by(cyl) %&gt;% 
+  group_modify(., ~ .x %&gt;% bind_rows(apply(.x, 2, min)))
+## # A tibble: 12 × 4
+## # Groups:   cyl [3]
+##      cyl   mpg  disp    hp
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1     4  22.8  108     93
+##  2     4  24.4  147.    62
+##  3     4  22.8  141.    95
+##  4     4  22.8  108     62
+##  5     6  21    160    110
+##  6     6  21.4  258    110
+##  7     6  18.1  225    105
+##  8     6  19.2  168.   123
+##  9     6  18.1  160    105
+## 10     8  18.7  360    175
+## 11     8  14.3  360    245
+## 12     8  14.3  360    175</code></pre>
+<p><code>.</code>指代分组后的整体数据框，而<code>.x</code>指代每组的小数据框</p>
+<p><code>apply</code>将函数min应用到每一列，返回的结果是向量；每组数据都返回一个向量。我们需要把计算得到的向量，跟着在每组数据的后边，用到<code>bind_rows</code></p>
+<p>每组都在做同样的两件事：</p>
+<ul>
+<li>apply(.x, 2, min)计算每个变量的最小值，得到结果；</li>
+<li>再用bind_rows把（每组）数据本身和结果合并起来；</li>
+</ul>
+<p>可能的疑问：<br />
+每组的数据类型是数据框，而结果的数据类型是向量，把不同的格式进行合并会不会有问题？</p>
+<blockquote>
+<p><code>bind_rows()</code> and <code>bind_cols()</code> return the same type as the first input.</p>
+</blockquote>
+<p>查看函数帮助，可以看到，如果向量是第二个参数，那么它会被转化成数据框。所以…</p>
+<p>按月份分组计算，同年同月的数据为一组</p>
+<pre class="r"><code>head(economics, 3)
+## # A tibble: 3 × 6
+##   date         pce    pop psavert uempmed unemploy
+##   &lt;date&gt;     &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;
+## 1 1967-07-01  507. 198712    12.6     4.5     2944
+## 2 1967-08-01  510. 198911    12.6     4.7     2945
+## 3 1967-09-01  516. 199113    11.9     4.6     2958
+economics %&gt;% 
+  group_by(ym= tsibble::yearmonth(date)) %&gt;% 
+  summarise(pce= mean(pce))
+## # A tibble: 574 × 2
+##           ym   pce
+##        &lt;mth&gt; &lt;dbl&gt;
+##  1  1967 7月  507.
+##  2  1967 8月  510.
+##  3  1967 9月  516.
+##  4 1967 10月  512.
+##  5 1967 11月  517.
+##  6 1967 12月  525.
+##  7  1968 1月  531.
+##  8  1968 2月  534.
+##  9  1968 3月  544.
+## 10  1968 4月  544 
+## # … with 564 more rows</code></pre>
+</div>
+<div id="筛选列" class="section level2">
+<h2>筛选列</h2>
+<p>去除所有元素都是”AAA”所在的列</p>
+<pre class="r"><code>df= tibble(x= rep(&quot;AAA&quot;, 5), y = 1:5,
+       z= c(rep(&quot;AAA&quot;, 3), &quot;b&quot;, &quot;c&quot;))
+df
+## # A tibble: 5 × 3
+##   x         y z    
+##   &lt;chr&gt; &lt;int&gt; &lt;chr&gt;
+## 1 AAA       1 AAA  
+## 2 AAA       2 AAA  
+## 3 AAA       3 AAA  
+## 4 AAA       4 b    
+## 5 AAA       5 c
+df %&gt;% 
+  select(where(~ !all(.x == &quot;AAA&quot;)))
+## # A tibble: 5 × 2
+##       y z    
+##   &lt;int&gt; &lt;chr&gt;
+## 1     1 AAA  
+## 2     2 AAA  
+## 3     3 AAA  
+## 4     4 b    
+## 5     5 c</code></pre>
+<p>.x == “AAA”是判断语句，判断每个列向量是否等于”AAA”，返回的结果是与列向量等长度的逻辑向量。比如z列的结果是T T T F F。</p>
+<p>配合all函数。只有当逻辑向量中全为TRUE，<code>all(逻辑向量)</code>的结果才是TRUE。那么y列、z列的结果都是FALSE。这样一来，结果为TRUE的列才会被保留，其余列都会被筛除。</p>
+<p>而我们想要的结果相反，是想筛除x列，保留y z列。所以我们用<code>!</code>符号，反向选择。</p>
+<div id="正则表达式" class="section level3">
+<h3>正则表达式</h3>
+<ul>
+<li>找出数值</li>
+<li>找出紧跟在b后的数值</li>
+<li>找出b后面出现的数值??</li>
+</ul>
+<pre class="r"><code>tt = c(&quot;ab1&quot;, &quot;vf2&quot;, &quot;aaba2&quot;, &quot;dd9b76&quot;, &quot;d8p&quot;, &quot;a0b3e4&quot;)
+str_extract_all(tt, &quot;\\d+&quot;) 
+## [[1]]
+## [1] &quot;1&quot;
+## 
+## [[2]]
+## [1] &quot;2&quot;
+## 
+## [[3]]
+## [1] &quot;2&quot;
+## 
+## [[4]]
+## [1] &quot;9&quot;  &quot;76&quot;
+## 
+## [[5]]
+## [1] &quot;8&quot;
+## 
+## [[6]]
+## [1] &quot;0&quot; &quot;3&quot; &quot;4&quot;
+str_extract(tt, &quot;(?&lt;=b)\\d+&quot;)
+## [1] &quot;1&quot;  NA   NA   &quot;76&quot; NA   &quot;3&quot;</code></pre>
+</div>
+<div id="za" class="section level3">
+<h3>za</h3>
+<p><code>length&lt;-</code>是R自带函数，赋以长度的意思，后面max语句是作为实参传入</p>
+<p>将数据框中每个单元格中的数分别相加，但不含第一个数</p>
+<blockquote>
+<p>张老师：我以前不理解为什么str_split返回结果要设计成那么难访问的列表，最近才体会到，在数据框中使用是多么方便</p>
+</blockquote>
+<pre class="r"><code>TEST &lt;- tibble(a_AD = c(&#39;1,2&#39;,&#39;0,2,3&#39;,&#39;2,0&#39;,&#39;0,0,2,3&#39;), 
+b_AD = c(&#39;1,2&#39;,&#39;0,0,2,3&#39;,&#39;0,2,0,3&#39;,&#39;2,0&#39;))
+TEST
+## # A tibble: 4 × 2
+##   a_AD    b_AD   
+##   &lt;chr&gt;   &lt;chr&gt;  
+## 1 1,2     1,2    
+## 2 0,2,3   0,0,2,3
+## 3 2,0     0,2,0,3
+## 4 0,0,2,3 2,0
+TEST %&gt;% 
+  mutate(across(1:2, ~ str_split(.x, &quot;,&quot;) %&gt;% 
+                  map(as.numeric) %&gt;% 
+                  map_dbl(~ sum(.x[-1]))))
+## # A tibble: 4 × 2
+##    a_AD  b_AD
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1     2     2
+## 2     5     5
+## 3     0     5
+## 4     5     0</code></pre>
+<p>across中的函数对每一列做了什么操作？</p>
+<p>str_split将每个元素/字符串，拆分为字符型向量；然后map+as.numeric把列表列中的字符型向量转化为数值型，这里.x指的列表列中的单个向量；最后map遍历：对列表列中每个向量进行求和；加_dbl后缀，求和的结果转化成了列向量。</p>
+<pre class="r"><code>library(lubridate)
+df = tibble(x = as.Date(c(&quot;2005/1--20&quot;, &quot;2018/9--3&quot;), 
+                        format = &quot;%Y/%m--%d&quot;))
+df
+## # A tibble: 2 × 1
+##   x         
+##   &lt;date&gt;    
+## 1 2005-01-20
+## 2 2018-09-03
+df %&gt;% 
+  mutate(y = if_else(x &lt;= as.Date(&quot;2005-1-20&quot;), x, NA_Date_))
+## # A tibble: 2 × 2
+##   x          y         
+##   &lt;date&gt;     &lt;date&gt;    
+## 1 2005-01-20 2005-01-20
+## 2 2018-09-03 NA</code></pre>
+<p>使用<code>if_else</code>时，须注意重编码后的数据类型，要与初始的数据类型保持一致。那么如果要替换成NA，严格来说要换成NA_character_、NA_real_(double型缺失值)。而<code>NA_Date_</code>的使用，要加载lubridate包。</p>
+</div>
+</div>

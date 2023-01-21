@@ -1,0 +1,181 @@
+---
+title: Data Science
+author: ''
+date: '2023-01-14'
+slug: data-sci
+categories:
+  - R
+tags: []
+description: ''
+keywords: []
+link: ''
+---
+
+```{r setyp, include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(warning=FALSE, message=FALSE, collapse=TRUE)
+```
+
+### 分组操作
+
+
+批量t检验
+
+```{r}
+library(tidyverse)
+library(rstatix)
+df = read_csv("F:/Learning_materials/R/正则/Demo_t.test.csv")
+df
+df= df %>% 
+  pivot_longer(-1, names_pattern = "(.*)_", names_to = c(".value")) %>% 
+  pivot_longer(-1, names_to = "trt", values_to = "val")
+df
+df %>% 
+  group_by(compoundID) %>% 
+  t_test(val ~ trt, detailed = TRUE)
+```
+
+
+
+根据cyl列可将数据分为3组，分组修改数据框，使用`group_modify`
+
+> group_modify() returns a grouped tibble. In that case .f must return a data frame.
+
+
+
+
+1. 计算每组中所有变量的最小值
+2. 并将结果分别添加在各组的最后面
+
+```{r}
+df= mtcars[2:10, 1:4] 
+df
+unique(df$cyl) # cyl, has 3 levels
+df %>% 
+  group_by(cyl) %>% 
+  summarise(across(.fns = min))
+df %>% 
+  group_by(cyl) %>% 
+  group_modify(., ~ .x %>% bind_rows(apply(.x, 2, min)))
+```
+
+`.`指代分组后的整体数据框，而`.x`指代每组的小数据框
+
+
+`apply`将函数min应用到每一列，返回的结果是向量；每组数据都返回一个向量。我们需要把计算得到的向量，跟着在每组数据的后边，用到`bind_rows`
+
+
+每组都在做同样的两件事：
+
+- apply(.x, 2, min)计算每个变量的最小值，得到结果；
+- 再用bind_rows把（每组）数据本身和结果合并起来；
+
+
+可能的疑问：  
+每组的数据类型是数据框，而结果的数据类型是向量，把不同的格式进行合并会不会有问题？
+
+> `bind_rows()` and `bind_cols()` return the same type as the first input.
+
+查看函数帮助，可以看到，如果向量是第二个参数，那么它会被转化成数据框。所以...
+
+
+按月份分组计算，同年同月的数据为一组
+
+
+```{r}
+head(economics, 3)
+economics %>% 
+  group_by(ym= tsibble::yearmonth(date)) %>% 
+  summarise(pce= mean(pce))
+```
+
+
+
+
+
+
+
+## 筛选列
+
+去除所有元素都是"AAA"所在的列
+
+```{r}
+df= tibble(x= rep("AAA", 5), y = 1:5,
+       z= c(rep("AAA", 3), "b", "c"))
+df
+df %>% 
+  select(where(~ !all(.x == "AAA")))
+```
+
+.x == "AAA"是判断语句，判断每个列向量是否等于"AAA"，返回的结果是与列向量等长度的逻辑向量。比如z列的结果是T T T F F。
+
+配合all函数。只有当逻辑向量中全为TRUE，`all(逻辑向量)`的结果才是TRUE。那么y列、z列的结果都是FALSE。这样一来，结果为TRUE的列才会被保留，其余列都会被筛除。
+
+而我们想要的结果相反，是想筛除x列，保留y z列。所以我们用`!`符号，反向选择。
+
+
+
+
+### 正则表达式
+
+- 找出数值
+- 找出紧跟在b后的数值
+- 找出b后面出现的数值??
+
+```{r}
+tt = c("ab1", "vf2", "aaba2", "dd9b76", "d8p", "a0b3e4")
+str_extract_all(tt, "\\d+") 
+str_extract(tt, "(?<=b)\\d+")
+
+```
+
+
+
+
+
+
+
+
+### za
+
+
+`length<-`是R自带函数，赋以长度的意思，后面max语句是作为实参传入
+
+
+
+将数据框中每个单元格中的数分别相加，但不含第一个数
+
+> 张老师：我以前不理解为什么str_split返回结果要设计成那么难访问的列表，最近才体会到，在数据框中使用是多么方便
+
+
+```{r}
+TEST <- tibble(a_AD = c('1,2','0,2,3','2,0','0,0,2,3'), 
+b_AD = c('1,2','0,0,2,3','0,2,0,3','2,0'))
+TEST
+TEST %>% 
+  mutate(across(1:2, ~ str_split(.x, ",") %>% 
+                  map(as.numeric) %>% 
+                  map_dbl(~ sum(.x[-1]))))
+```
+
+across中的函数对每一列做了什么操作？
+
+str_split将每个元素/字符串，拆分为字符型向量；然后map+as.numeric把列表列中的字符型向量转化为数值型，这里.x指的列表列中的单个向量；最后map遍历：对列表列中每个向量进行求和；加_dbl后缀，求和的结果转化成了列向量。
+
+
+```{r}
+library(lubridate)
+df = tibble(x = as.Date(c("2005/1--20", "2018/9--3"), 
+                        format = "%Y/%m--%d"))
+df
+df %>% 
+  mutate(y = if_else(x <= as.Date("2005-1-20"), x, NA_Date_))
+```
+
+使用`if_else`时，须注意重编码后的数据类型，要与初始的数据类型保持一致。那么如果要替换成NA，严格来说要换成NA_character_、NA_real_(double型缺失值)。而`NA_Date_`的使用，要加载lubridate包。
+
+
+
+
+
+
