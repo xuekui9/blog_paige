@@ -8,7 +8,7 @@ author: Hugo Authors
 date: "2019-02-28"
 
 description: 
-title: 别有洞天
+title: Information
 ---
 
 <br>
@@ -19,12 +19,13 @@ title: 别有洞天
 
 ----
 
-## Presentations
+## Some
 
 <br>
 
 - 2022.10 专业英语：Meta群落理论 ([Slide](https://xuekui.site/metacommu/term-commu#1))
 - 2022.10 杜克风幻灯片，来自dukeslides包 ([Slide](https://xuekui.site/duke/duke_univ#1))
+- 2022.8 R书籍，东林图书馆 ([HTML](https://xuekui.site/source/R-book-NEFU)
 - 2022.7 重复测量方差分析，R实现 ([HTML](https://xuekui.site/xknote))
 
 
