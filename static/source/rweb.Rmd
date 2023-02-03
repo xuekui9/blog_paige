@@ -1,0 +1,700 @@
+---
+title: "资料、教程，等"
+author: "Kui Xue"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: kate
+    toc_depth: 3
+    number_sections: yes # 按节编号
+---
+
+```{r setup, include=FALSE}
+## Global options
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse=TRUE)
+```
+
+
+
+
+
+
+
+# R Book
+
+- [Big book of R](https://www.bigbookofr.com/)
+
+
+## Eng
+
+
+- [数据科学相关丛书-Bookdown](https://bookdown.org/home/tags/data-science/)
+- [R for Data Science (2e)](https://r4ds.hadley.nz/)
+- [R Cookbook, 2nd Edition](https://rc2e.com/)
+
+- [Modern Data Science with R](https://mdsr-book.github.io/mdsr2e/)
+- [学R-Learning R-Richard Cotton](http://duhi23.github.io/Analisis-de-datos/Cotton.pdf)
+- [R语言入门与实践-Hands-On Programming with R](https://d1b10bmlvqabco.cloudfront.net/attach/ighbo26t3ua52t/igp9099yy4v10/igz7vp4w5su9/OReilly_HandsOn_Programming_with_R_2014.pdf)
+- [An introduction to R](https://intro2r.com/)
+
+- [R for data science: tidyverse and beyond](https://bookdown.org/Maxine/r4ds/)
+- [Introductory R training - DfE R training](https://dfe-analytical-services.github.io/r-training-course/)
+- [R for Data Science Book Club](https://r4ds.github.io/bookclub-r4ds/)
+- [Tidyverse skills for data science](https://jhudatascience.org/tidyversecourse/)
+- [R Programming: Zero to Pro](https://r02pro.github.io/)
+- [R Programming for Data Science](https://bookdown.org/rdpeng/rprogdatascience/)
+- [Data Analysis in R](https://bookdown.org/steve_midway/DAR/)
+- [Functional Programming-Stanford](https://dcl-prog.stanford.edu/)
+- [Efficient R programming](https://csgillespie.github.io/efficientR/index.html)
+- [R Without Statistics](https://book.rwithoutstatistics.com/index.html)
+- [Introduction to Business Analytics](https://www.causact.com/index.html#welcome)
+- [Introduction to Computational and Data Sciences](https://book.cds101.com/)
+- [Using R for Digital Soil Mapping](http://smartdigiag.com/DSM_book/)
+- [Survey Data: Design and Examples](https://ehsanx.github.io/SPPH504007SurveyData/docs/)
+- [The Grammar of Experimental Designs](https://emitanaka.org/edibble-book/)
+
+- [R for beginners](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf)
+
+
+
+
+### Meta analysis
+
+
+- [Doing Meta-Analysis with R: A Hands-On Guide](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
+- [Meta-analysis of Ecological Data in R](https://bookdown.org/robcrystalornelas/meta-analysis_of_ecological_data/)
+- Handbook of Meta-Analysis in Ecology and Evolution
+
+
+
+### 微生物分析
+
+- [Proteomics Data Analysis in R/Bioconductor](https://pnnl-comp-mass-spec.github.io/proteomics-data-analysis-tutorial/)
+- [微生物群落生态学数据挖掘的R包microeco](https://blog.csdn.net/woodcorpse/article/details/114770376)
+- [Tutorial for R microeco package (v0.13.0)](https://chiliubio.github.io/microeco_tutorial/)
+- [Introduction to Bioinformatics and Computational Biology](https://liulab-dfci.github.io/bioinfo-combio/index.html)
+- [每天更新微生物相关文章](https://microbiomedigest.com/)
+- [Nicholas Blog-扩增子分析之类](https://www.nicholas-ollberding.com/)
+
+
+
+## 中文
+
+
+
+- [R 数据分析指南与速查手册-北大郭晓](https://bookdown.org/xiao/RAnalysisBook/)
+- [R语言进阶笔记-邓飞](https://dengfei2013.gitee.io/r-language-advanced/index.html)
+- [R语言基础与光谱建模](https://www.bookdown.org/aj7105/spec_book3/)
+- [R语言教程-北大李东风](https://www.math.pku.edu.cn/teachers/lidf/docs/Rbook/html/_Rbook/index.html)
+- [商业数据分析师-R语言数据处理](https://bookdown.org/zhongyufei/Data-Handling-in-R/)
+- [R for beginners_Chinese](http://staff.ustc.edu.cn/~zwp/teach/Stat-Comp/R4beg_cn_2.0.pdf)
+
+
+- [认识R的美好](https://bookdown.org/tonykuoyj/eloquentr/)
+- [R资料科学与统计](https://bookdown.org/jefflinmd38/r4biost/)
+
+- [R漂流记-胡华平](https://rworld.huhuaping.com/)
+
+
+- [R参考卡片](https://cran.r-project.org/doc/contrib/Liu-R-refcard.pdf)
+
+- [153分钟学会R](https://cran.r-project.org/doc/contrib/Liu-FAQ.pdf)
+- [基于R语言的科研信息分析与服务-王敏杰](https://bookdown.org/wangminjie/R4IS/)
+
+
+
+
+
+深度学习的数学
+
+正则指引-余晟 GC
+
+机器学习白板推导，b站 shuhuai008
+
+现代统计图形
+
+了不起的markdown
+
+SPSS统计分析-张文彤；
+
+概率论：概率论基础，李贤平复旦大学版；
+
+概率论与数理统计，茆诗松；
+
+统计建模与R软件，薛毅；
+
+
+
+
+
+
+
+
+
+#  R资料集合
+
+
+
+
+
+- [Bookdown](https://www.bookdown.org/)
+- [R资料-黄湘云整理](https://github.com/XiangyunHuang/R-Tutorial)
+- [Awsome R Resources in Ecology and Evolution-张金龙整理](https://github.com/helixcn/awsome-R-ecology-evolution)
+- [A curated list of awesome R packages and tools](https://github.com/qinwf/awesome-R)
+- [Books-Curated collection of resources](https://rfortherestofus.com/resources/)
+
+- [Hiplot](https://hiplot-academic.com/books)
+
+- [Coding Club R Course配套资料纯链接版](https://mp.weixin.qq.com/s/hMvCNs_s6VcSMAQivGsK4g)
+
+
+
+
+- [张金龙-R教程](https://github.com/Hello-BD/R-in-brief)
+- [米大鼠-RPubs教程](https://rpubs.com/maomaoworm)
+
+
+
+
+- [tidyverse 101](https://cmdlinetips.com/category/r/tidyverse-101/)
+- [批量建模-Correlation and regression fundamentals with tidy data principles](https://www.tidymodels.org/learn/statistics/tidy-analysis/)
+- [浅析R语言中map(映射)与reduce(规约)](https://www.yht7.com/news/144016)
+- [pdftools包使用技巧](https://jiaxiangli.netlify.app/2018/10/20/pdftools/)
+- [Excel计算标准差(stdev.S和stdev.P)](https://www.jianshu.com/p/9c94cb7bd8b2)
+- [雨沐田：大数据分析之数据库与Excel的区别](https://www.sohu.com/a/198766949_99956242)
+- [R for Biophysical Chemists](https://martinlab.chem.umass.edu/r-for-biophys/)
+
+- [R tutorial_TechVidvan](https://techvidvan.com/tutorials/r-tutorial/)
+- [R tutorial_Point](https://www.tutorialspoint.com/r/index.htm)
+- [datanovia商店](https://www.datanovia.com/en/shop/)
+- [datanovia教程-Learn菜单栏](https://www.datanovia.com/en/courses/comparing-multiple-means-in-r/)
+
+- [R统计与绘图公众号 2022-07-11 所有推文汇总](https://mp.weixin.qq.com/s/SATntxCfihw1CvORZ_TtUg)
+- [data.table学习资源-包寒吴霜](https://zhuanlan.zhihu.com/p/346366577)
+- [bruceR包在数据分析全流程中的应用-包寒吴霜](https://www.bilibili.com/video/BV1T94y1274r?vd_source=99989452af666a4bbc9e318e363f0b34)
+
+
+
+
+
+#  其他R相关
+
+- [熟悉R的基本指令-王诗翔](https://zhuanlan.zhihu.com/p/517505843)
+- [Rstudio常用快捷键以及窗口操作有用技巧](https://zhuanlan.zhihu.com/p/329708283)
+- [win10修改中文用户名](https://blog.csdn.net/weixin_39112840/article/details/86351133)
+- [How to Rename a User Home Folder in Windows 11](https://geekrewind.com/how-to-rename-a-user-home-folder-in-windows-11/)
+- [永久更改R包的安装目录](https://blog.csdn.net/sinat_21011081/article/details/115435298?utm_medium=distribute.pc_relevant.none-task-blog-2)
+- [COS论坛提问-新手必读](https://d.cosx.org/d/1553-1553)
+- [R问题｜如何查看函数的源代码](https://cloud.tencent.com/developer/article/1810619)
+
+
+
+- [Good Practices for Managing Projects in RStudio](https://carpentries-incubator.github.io/Reproducible-Publications-with-RStudio/04-good-project/index.html)
+- [R Studio中的Project--如何高效管理数据、代码、图形](https://www.bilibili.com/video/BV1ZB4y127oJ/?from=search&seid=16685859372881723929&spm_id_from=333.337.0.0&vd_source=ee82ebb8ba56ef71ec0ab0f564e002c6)
+
+- [诗翔的R语言学习之路](https://www.jianshu.com/c/f675dfc884de)
+- [R中的正则表达式及字符处理函数总结](http://yphuang.github.io/blog/2016/02/29/R-Regular-Expressions-And-String-Functions/)
+- [A Complete Beginners Guide to Regular Expressions in R](https://regenerativetoday.com/a-complete-beginners-guide-to-regular-expressions-in-r/)
+- mindr包，流程图
+
+
+
+
+## Bing搜索教程
+
+
+- [Repeat rows of a data.frame N times](https://stackoverflow.com/questions/8753531/repeat-rows-of-a-data-frame-n-times)
+- [Repeat Rows of DataFrame N Times in R](https://www.geeksforgeeks.org/repeat-rows-of-dataframe-n-times-in-r/)
+- [Repeat each row of data.frame the number of times specified in a column](https://stackoverflow.com/questions/2894775/repeat-each-row-of-data-frame-the-number-of-times-specified-in-a-column)
+- [3 Easy Ways to Repeat Rows in R](https://www.codingprof.com/3-easy-ways-to-repeat-rows-in-r-examples/#:~:text=The%20way%20to%20repeat%20rows%20in%20R%20is,more%20times%20and%20it%20has%20two%20mandatory%20arguments%3A)
+- [Repeat Rows of Data Frame N Times in R](https://statisticsglobe.com/repeat-rows-of-data-frame-n-times-in-r)
+- [Order DataFrame rows according to vector with specific order in R](https://www.geeksforgeeks.org/order-dataframe-rows-according-to-vector-with-specific-order-in-r/)
+- [How to find the index of an element in a vector in R?](https://www.tutorialspoint.com/how-to-find-the-index-of-an-element-in-a-vector-in-r)
+- [How to make all the elements in a list of equal size in R?](https://www.tutorialspoint.com/how-to-make-all-the-elements-in-a-list-of-equal-size-in-r)
+- [Count Number of List Elements in R](https://www.geeksforgeeks.org/count-number-of-list-elements-in-r/)
+- [将数据保存为R的数据格式:RDS,RDATA](https://taoyan.netlify.app/post/2020-04-12.%E5%B0%86%E6%95%B0%E6%8D%AE%E4%BF%9D%E5%AD%98%E4%B8%BAr%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8Frdsrdata/)
+- [Save and Load RData Workspace Files in R](https://www.geeksforgeeks.org/save-and-load-rdata-workspace-files-in-r/)
+
+
+## 报错处理
+
+- [报错日常 Error in grid.Call(C_convert, x, as.integer(whatfrom](https://www.bilibili.com/read/cv15983646/)
+- [Error when running a formula within a function](https://community.rstudio.com/t/error-when-running-a-formula-within-a-function/124325)
+- [Error in eval(predvars, data, env) : object not found](https://community.rstudio.com/t/error-in-eval-predvars-data-env-object-not-found-when-running-my-code-in-a-function/106694)
+- ["anova_test"函数错误(0 (non_NA) )和双向重复方差分析的线性组合](https://www.coder.work/article/7732120)
+- [How to stage, commit, and push to Github using RStudio Server](https://book.cds101.com/how-to-stage-commit-and-push-to-github-using-rstudio-server.html)
+- [git报错ssh: connect to host github.com port 22: Connection timed out](https://blog.csdn.net/nightwishh/article/details/99647545)
+- [git错误 error: failed to push some refs to https://github.com](https://blog.csdn.net/dietime1943/article/details/85682688#:~:text=error%3A%20failed%20to%20push%20some,refs%20to%20%27https%3A%2F%2Fgithub.com%2Fbluetata%2F%20%E9%97%AE%E9%A2%98%E5%8E%9F%E5%9B%A0%EF%BC%9A%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%B8%8E%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%8D%E4%B8%80%E8%87%B4%E9%80%A0%E6%88%90%E7%9A%84%EF%BC%8C%E5%9C%A8hint%E4%B8%AD%E4%B9%9F%E6%9C%89%E6%8F%90%E7%A4%BA%E6%8A%8A%E8%BF%9C%E7%A8%8B%E5%BA%93%E5%90%8C%E6%AD%A5%E5%88%B0%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%B0%B1%E5%8F%AF%E4%BB%A5%E4%BA%86%E3%80%82%20%E8%AF%A5%E5%91%BD%E4%BB%A4%E7%9A%84%E6%84%8F%E6%80%9D%E6%98%AF%E6%8A%8A%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%B8%AD%E7%9A%84%E6%9B%B4%E6%96%B0%E5%90%88%E5%B9%B6%E5%88%B0%EF%BC%88pull%3Dfetch%2Bmerge%EF%BC%89%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%AD%EF%BC%8C%E2%80%93-rebase%E7%9A%84%E4%BD%9C%E7%94%A8%E6%98%AF%E5%8F%96%E6%B6%88%E6%8E%89%E6%9C%AC%E5%9C%B0%E5%BA%93%E4%B8%AD%E5%88%9A%E5%88%9A%E7%9A%84commit%EF%BC%8C%E5%B9%B6%E6%8A%8A%E4%BB%96%E4%BB%AC%E6%8E%A5%E5%88%B0%E6%9B%B4%E6%96%B0%E5%90%8E%E7%9A%84%E7%89%88%E6%9C%AC%E5%BA%93%E4%B9%8B%E4%B8%AD%E3%80%82)
+
+
+
+
+
+
+
+
+
+
+#  统计
+
+
+- [埃默里牛津学院](https://mathcenter.oxford.emory.edu/site/math117/)
+- [Machine learning operations, or MLOps](https://vetiver.rstudio.com/)
+- [一文了解临床研究中的机器学习](https://zhuanlan.zhihu.com/p/165348448)
+- [kaggle数据科学社区-机器学习相干](https://www.kaggle.com/)
+
+
+
+- [Accelerating Data Exploration](https://towardsdatascience.com/accelerating-data-exploration-e0047fbd08b6)
+
+
+## Book
+
+- [统计书籍相关丛书-Bookdown](https://bookdown.org/home/tags/statistics/)
+- [Introductory Biostatistics with R](https://tuos-bio-data-skills.github.io/intro-stats-book/)
+- [ReCentering Psych Stats](https://lhbikos.github.io/ReCenterPsychStats/)
+- [An R companion to Statistical Thinking for the 21st Century](https://statsthinking21.github.io/statsthinking21-R-site/index.html)
+- [Statistical Inference](https://bookdown.org/mpfoley1973/statistics/)
+- [Statistical Inference via Data Science: A ModernDive into R and the Tidyverse](https://moderndive.com/)
+- [Learning Statistics with R](https://learningstatisticswithr.com/)
+- [Foundations of Statistics with R](https://bookdown.org/speegled/foundations-of-statistics/)
+
+
+
+
+
+#  可视化
+
+
+- [Scherer-数据可视化大佬](https://www.cedricscherer.com/2019/08/05/a-ggplot2-tutorial-for-beautiful-plotting-in-r/)
+
+- [Andrew Heiss-可视化、贝叶斯理解](https://www.andrewheiss.com/blog/)
+
+
+- [ggplot2: elegant graphics for data analysis](https://ggplot2-book.org/index.html)
+- [R Graphics Cookbook, 2nd edition](https://r-graphics.org/)
+- [Data Visualization with ggplot2](https://viz-ggplot2.rsquaredacademy.com/)
+- [Fundamental of data visualization](https://clauswilke.com/dataviz/)
+
+
+
+
+- [R graph gallery](http://r-graph-gallery.com/index.html)
+
+- [ggplot2学习笔记系列之主题（theme）设置](https://blog.csdn.net/kMD8d5R/article/details/79386843?ops_request_misc=&request_id=&biz_id=102&utm_term=r%E8%AF%AD%E8%A8%80panel.border=%20element_rect&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-79386843.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187)
+- [Spacing between legend keys in ggplot](https://stackoom.com/en/question/3VGYm)
+- [How to Change Spacing Between Legend Items in ggplot2](https://www.statology.org/ggplot-legend-spacing/)
+- [change the spacing between legend items](https://thecitrusreport.com/questions/is-there-a-way-to-change-the-spacing-between-legend-items-in-ggplot2/)
+- [ggplot 非常难调的参数](https://www.cnblogs.com/huangying78/p/9967312.html)
+- [scale_xxx()标度调整](https://blog.csdn.net/weixin_43528109/article/details/83859213?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163272591016780262581432%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163272591016780262581432&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-83859213.first_rank_v2_pc_rank_v29&utm_term=scale_color_brewer&spm=1018.2226.3001.4187)
+- [ggplot2 scale_*_*()函数](https://blog.csdn.net/xiangyong58/article/details/115382314?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163272736316780357268623%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163272736316780357268623&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-115382314.first_rank_v2_pc_rank_v29&utm_term=scale_color_brewer%E8%AE%BE%E7%BD%AE%E7%A6%BB%E6%95%A3&spm=1018.2226.3001.4187)
+- [R所有颜色](https://blog.csdn.net/zhouyijun888/article/details/69213494)
+- [ggbreak：你们要的坐标轴截断，它来了](https://mp.weixin.qq.com/s?__biz=MzI5NjUyNzkxMg==&mid=2247490820&idx=1&sn=653ee5971fa79a718867ab0bf5e33a31&chksm=ec43ac43db3425550af196c3b4681696773fca8143333e36286333a6d62cb86dbbbc04f34ef9&mpshare=1&scene=23&srcid=05236frNGrcZszUbEEKcPyJ4&sharer_sharetime=1621759903034&sharer_shareid=1e5671db49d8b4a903dafa13dc520806#rd)
+- [Add Subscript and Superscript to Plot in R](https://statisticsglobe.com/add-subscript-and-superscript-to-plot-in-r)
+
+- [Customize the axis scales for individual ggplot facets](https://genchanghsu.github.io/ggGallery/posts/2021-09-11-post-7-customize-the-axis-scales-for-individual-facets/)
+- [facet ggh4x](https://teunbrand.github.io/ggh4x/articles/Facets.html)
+- [R语言之可视化（20）之geom_label和geom_text](https://cloud.tencent.com/developer/article/1394482)
+
+## 添加显著性( R^2^ *P* 值 )
+
+- [Add P-values and Significance Levels to ggplot](http://sthda.com/english/articles/24-ggpubr-publication-ready-plots/76-add-p-values-and-significance-levels-to-ggplots/)
+- [Add P-val onto grouped plots-ggpubr包](https://www.datanovia.com/en/blog/how-to-add-p-values-onto-a-grouped-ggplot-using-the-ggpubr-r-package/)
+- [添加p-value和显著性标记](https://www.jianshu.com/p/b7274afff14f)
+- [ggsignif添加显著性标识](https://www.jianshu.com/p/4d9d13ae8744)
+- [Add Correlation Coefficients with P-values to a Scatter Plot](https://rpkgs.datanovia.com/ggpubr/reference/stat_cor.html)
+
+Packages for adding significance: `ggsignif`, `ggpubr`, `ggprism`
+
+Add R^2^, `ggpmisc`
+
+- [r - ggarrange 绘制列表中的所有图](https://www.coder.work/article/6819471)
+- [Density plot in ggplot2 with geom_density](https://r-charts.com/distribution/density-plot-ggplot2/)
+
+- [R 数据可视化 —— ggplot 柱状图/条形图](https://www.jianshu.com/p/65b8aacefa20)
+- [R 数据可视化 —— 图形排列之 patchwork](https://zhuanlan.zhihu.com/p/384456335)
+
+
+
+- [庄闪闪的可视化手册](https://liangliangzhuang.github.io/R-tutorial/)
+- [R问题｜数值模拟流程记录和分享，庄闪闪](https://cloud.tencent.com/developer/article/1839446)
+
+- [Introduction to forest plots](https://cran.r-project.org/web/packages/forestplot/vignettes/forestplot.html)
+- [How to Create a Forest Plot in R](https://www.statology.org/forest-plot-in-r/)
+- [Forest Plots, 第6章](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/forest.html)
+- [R语言空间数据分析（零）：总目录，黄天元](https://zhuanlan.zhihu.com/p/283199848)
+- [How To Make World Map with ggplot2 in R?](https://datavizpyr.com/how-to-make-world-map-with-ggplot2-in-r/)
+- [tmap包](https://r-tmap.github.io/tmap/)
+- [R获取中国标准官方地图](https://www.jianshu.com/p/19935c44cbf7)
+- [R语言画中国地图](https://xiangyun.rbind.io/2022/02/draw-china-maps/)
+- [R语言绘制中国地图](https://zhuanlan.zhihu.com/p/364315677)
+- [R_ggplot2地理信息可视化_史上最全(二)](https://blog.csdn.net/weixin_36283702/article/details/113539678)
+- [实用技术 | 如何用R绘制并填充相对正确的中国地图](https://www.sohu.com/a/444996430_806115)
+- [如何在论文中画出漂亮的插图？](https://www.zhihu.com/question/21664179)
+
+
+
+
+
+
+
+
+
+
+
+# 相关性与回归分析
+
+
+- [批量建模-Fitting non-linear regressions with broom, purrr and nls.multstart](https://padpadpadpad.github.io/post/fitting-non-linear-regressions-with-broom-purrr-and-nls.multstart/)
+- [Fitting exponential decays in R, the easy way](https://douglas-watson.github.io/post/2018-09_exponential_curve_fitting/)
+- [ggtrendline: an R package for adding trendline and confidence interval to ggplot](https://meiweiping.cn/ggtrendline-an-R-package-for-adding-trendline-and-confidence-interval-to-ggplot/)
+- [R demo | Correlation Matrix | Danger or opportunity?](https://yuzar-blog.netlify.app/posts/2022-01-05-correlationmatrixinr/)
+- [Correlation Analysis in R | Pearson, Spearman, Robust, Bayesian | How to conduct, visualise and interpret](https://yuzar-blog.netlify.app/posts/2021-12-29-correlationinr/)
+- [R语言相关系数可视化之corrplot包](https://zhuanlan.zhihu.com/p/28076189)
+- [corrplot绘图相关系数矩阵](https://blog.csdn.net/woodcorpse/article/details/79417978)
+- [ggplot2的回归模型拟合以及回归曲线作图方法杂烩](https://blog.csdn.net/weixin_39641173/article/details/111172294?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link)
+- [线性回归R语言](https://blog.csdn.net/dingchenxixi/article/details/50543822?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163678897716780274117529%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=163678897716780274117529&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-1-50543822.first_rank_v2_pc_rank_v29&utm_term=R+step&spm=1018.2226.3001.4187)
+- [R语言-一元线性回归的应用](https://zhuanlan.zhihu.com/p/37556208)
+- [R语言-多元回归分析](https://zhuanlan.zhihu.com/p/38306630)
+- [R做多元线性回归全攻略](https://www.jianshu.com/p/4c6c8174f292)
+- [R语言——Ridge和Lasso回归分析](https://zhuanlan.zhihu.com/p/377988205)
+- [R – fitting data to a mathematical model Nonlinear Least Square Curve Fitting](https://martinlab.chem.umass.edu/r-fitting-data/)
+- [Why Is There No R-Squared for Nonlinear Regression?](https://blog.minitab.com/en/adventures-in-statistics-2/why-is-there-no-r-squared-for-nonlinear-regression)
+- [The R-squared and nonlinear regression: a difficult marriage?](https://www.statforbiology.com/2021/stat_nls_r2/)
+
+
+
+
+
+
+
+
+
+#  方差分析
+
+
+- [R语言基础统计分析：正态性检验、方差齐性检验、T检验、方差分析、秩和检验](https://blog.csdn.net/dataxc/article/details/115833293?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522164610543716780264046178%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=164610543716780264046178&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-17-115833293.pc_search_result_cache&utm_term=R+%E6%AD%A3%E6%80%81%E6%80%A7%E6%A3%80%E9%AA%8C&spm=1018.2226.3001.4187)
+- [R统计绘图-单、双、三因素重复测量方差分析](https://mp.weixin.qq.com/s/zUhDERtJAPkoQDNnGNxMBg)
+- [Mauchly’s Test of Sphericity in R](https://www.datanovia.com/en/lessons/mauchlys-test-of-sphericity-in-r/)
+- [R统计绘图-One-Way MANOVA](https://blog.csdn.net/qq_39859424/article/details/120195526)
+- [混合设计方差分析 （Mixed-design ANOVA）](https://blog.sciencenet.cn/blog-2939172-943676.html)
+- [方差分析表和回归分析表的解读](https://blog.csdn.net/MYMarcoreus/article/details/111945748)
+
+
+
+#  PCA
+
+- [PCA tidyverse style](https://clauswilke.com/blog/2020/09/07/pca-tidyverse-style/)
+- [R语言PCA分析教程 Principal Component Methods in R](https://blog.csdn.net/LuohenYJ/article/details/97950522)
+- [主成分分析PCA（绘图+原理）](https://cloud.tencent.com/developer/article/1830441)
+- [R语言进阶之主成分分析](https://zhuanlan.zhihu.com/p/258768322)
+- [PCA with tidymodels in R](https://cmdlinetips.com/2020/06/pca-with-tidymodels-in-r/)
+
+# 随机森林
+
+- [随机森林，分类模型](https://mp.weixin.qq.com/s?__biz=MzIxNzc1Mzk3NQ==&mid=2247484639&idx=1&sn=3ffb311fbe0636c2ba6aaafafa2cf4ba&chksm=97f5b4c7a0823dd1df73e5f7799f85083a1129105d09dc0996703961a46e00f5509ee812d4e0&token=824732611&lang=zh_CN&scene=21#wechat_redirect)
+- [随机森林，回归模型以及对重要变量的选择](https://mp.weixin.qq.com/s?__biz=MzIxNzc1Mzk3NQ%3D%3D&chksm=97f5b81ba082310dddc24dbfeb8c1296747a049aab606495cbae60c9a3c6a6cb13355ff8866b&idx=1&lang=zh_CN&mid=2247485443&scene=21&sn=d6d1e2a61452a73abf7e8a59d1ad822d&token=1775359184#wechat_redirect)
+- [如何评估随机森林模型以及重要预测变量的显著性](https://blog.csdn.net/woodcorpse/article/details/115302125?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522163335447716780269893019%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=163335447716780269893019&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-3-115302125.first_rank_v2_pc_rank_v29&utm_term=%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97%E5%88%86%E7%B1%BB%E4%BB%A5%E5%8F%8A%E5%AF%B9%E9%87%8D%E8%A6%81%E5%8F%98%E9%87%8F%E7%9A%84%E9%80%89%E6%8B%A9&spm=1018.2226.3001.4187)
+- [决策树的分类模型及对重要变量的选择及R操作](https://mp.weixin.qq.com/s?__biz=MzIxNzc1Mzk3NQ==&mid=2247484634&idx=1&sn=cc4ffdb0ec695c9c950d8682e86d5560&chksm=97f5b4c2a0823dd49e08f37abac74cba51bd6149b0c526adb0b33ffd1d28cdb631379570d6a6&token=1478814531&lang=zh_CN&scene=21#wechat_redirect)
+- 
+
+
+
+#  Blog
+
+- [Henry Wang](https://henrywang.nl/)
+- [Kai Gu](https://www.bioinfo-scrounger.com/categories/Programming-Notes/R/)
+- [楚新元](https://cxy.rbind.io/)
+- [王诗翔](https://shixiangwang.github.io/home/cn/writing/)
+- [庄闪闪](https://zll-blog.netlify.app/)
+- [黄湘云](https://xiangyun.rbind.io/)
+- [谢益辉](https://yihui.org/)
+- [yuzaR](https://yuzar-blog.netlify.app/)
+- [Danielle Navarro-Data Science](https://blog.djnavarro.net/)
+- [Danielle Navarro-Slides](https://slides.djnavarro.net/)
+- [Yan tao](https://taoyan.netlify.app/post/)
+- [梅卫平-R语言](https://meiweiping.cn/)
+- [叶寻-文笔](https://cyrusyip.org/zh-cn/)
+- [于淼](https://yufree.cn/)
+- [刘思喆](https://bjt.name/archives/)
+- [yongfuLiao](https://yongfu.name/)
+- [张霜](https://blog.sciencenet.cn/home.php?mod=space&uid=3442043)
+- [赖江山博客](https://blog.sciencenet.cn/u/laijiangshan)
+- [李东风](https://blog.sciencenet.cn/home.php?mod=space&uid=729911)
+- [斯幸峰](http://blog.sciencenet.cn/u/seexf2012)
+- [张金龙](https://blog.sciencenet.cn/u/zjlcas)
+- [李欣海](https://blog.sciencenet.cn/u/lixinhai)
+- [Jimmy那些事儿](https://chf2012.github.io/)
+
+
+#   Tools/混杂
+
+
+- [科研绘图素材资源合集](https://zhuanlan.zhihu.com/p/363616600)
+- [现代科研指北](https://bookdown.org/yufree/sciguide/)
+- [给研究生的一些忠告-斯幸峰](https://blog.sciencenet.cn/blog-720485-784084.html)
+- [一个数据科学家的这些年-李舰](https://cosx.org/2015/07/years-as-a-data-scientist/)
+
+- [图标素材icon-爱给](https://www.aigei.com/icon/class/)
+- [Icons-fontawesome](https://fontawesome.com/icons)
+- [别再用FontAwesome了](https://www.jianshu.com/p/5d4a39cdf96d)
+- [经纬度格式转换](http://www.minigps.net/fc.html)
+- [经纬度定位](https://map.jiqrxx.com/jingweidu/)
+- [配色方案](https://color.uisdc.com/pick.html)
+- [配色网站](https://coolors.co/)
+- [颜色值转换](https://sunpma.com/other/rgb/)
+- [RGB颜色值转换](https://www.sioe.cn/yingyong/yanse-rgb-16/)
+
+- [Comet Observation database (COBS)](https://cobs.si/)
+- [Bright comets in the coming 3 months](http://astro.vanbuitenen.nl/comets)
+- [软仓-软件下载](https://www.ruancang.net/#/sim)
+- [国外手机号短信验证码付费接收平台购买、使用教程丨附免费接码网站汇总](https://baiyunju.cc/10829)
+- [全能VIP视频在线解析](https://www.yijingying.com/html/video/)
+- [设计辅助网-软件插件下载](https://www.shejifuzhu.com/)
+- [前线乐园-软件](https://www.yijingying.com/)
+- [脚本之家](https://www.jb51.net/)
+
+
+
+# Markdown or Blogdown
+
+
+- [Markdown 基本语法](https://markdown.com.cn/basic-syntax/)
+- [Inline code](https://riptutorial.com/markdown/example/1802/inline-code)
+- [R Markdown 指南](https://cosname.github.io/rmarkdown-guide/)
+- [Communicate Data with R](https://communicate-data-with-r.netlify.app/docs/communicate/rmarkdown/)
+- [RMarkdown for Scientists](https://rmd4sci.njtierney.com/)
+- [R语言之Rmarkdown从入门到精通，庄闪闪B站](https://www.bilibili.com/video/BV1ib4y1X7r9?p=1&vd_source=ee82ebb8ba56ef71ec0ab0f564e002c6)
+- [R Markdown学习，Kai Gu](https://www.bioinfo-scrounger.com/archives/614/)
+- [能跑代码的 Markdown 编辑器——Rmarkdown](https://sspai.com/post/42841)
+- [用Rmarkdown 写论文——解决参考文献与交叉引用](https://sspai.com/post/53998)
+- [R Markdown 使用方法笔记](https://www.cnblogs.com/huidanz/p/8543248.html)
+- [R-Markdown学习与使用](https://www.jianshu.com/p/f50ac311b591)
+- [R沟通｜Rmarkdown(5)一些常用技巧，庄闪闪](https://cloud.tencent.com/developer/article/1810616)
+- [Markdown 技巧](https://cyrusyip.org/zh-cn/post/2020/12/15/markdown-tricks/)
+- [windows版rstudio安装pandoc](https://www.ivistang.com/articles/260/#%E6%AD%A3%E6%96%87%E5%BC%80%E5%A7%8B)
+- [Latex - Basic elements for writing a book_thesis](https://b23.tv/z0b9rwO)
+
+
+- [CSS-Tutorial](https://www.w3schools.com/css/default.asp)
+- [CSS border-style 属性](https://www.w3school.com.cn/cssref/pr_border-style.asp)
+- [div style常用属性介绍及使用示例](https://blog.csdn.net/hemeinvyiqiluoben/article/details/54786466)
+- [background-position](https://developer.mozilla.org/en-US/docs/Web/CSS/background-position)
+- [How to add horizontal line in HTML ?](https://www.geeksforgeeks.org/how-to-add-horizontal-line-in-html/)
+- [padding](https://developer.mozilla.org/en-US/docs/web/css/padding)
+- [css-font](https://www.w3schools.com/css/css_font.asp)
+- [HTML Text align | Center, Right, Top, Bottom | Vertical Alignment](https://tutorial.eyehunts.com/html/html-text-align-center-right-top-bottom-justify-vertical-alignment/#:~:text=If%20a%20text%20justified%20both%20on%20the%20left,an%20equal%20width%20%28like%20in%20newspapers%20and%20books%29.)
+
+
+
+
+
+- [remark/wiki](https://github.com/gnab/remark/wiki)
+- [gnab-remark](https://github.com/gnab/remark)
+- [remark-redux/wiki/Styling](https://github.com/WayneBuckhanan/remark-redux/wiki/Styling)
+- [ryokbys/remark_slide/](https://github.com/ryokbys/remark_slide/blob/master/content.md)
+- [xaringan/wiki/Title-slide](https://github.com/yihui/xaringan/wiki/Title-slide)
+- [Changing fonts-xaringan/wiki](https://github.com/yihui/xaringan/wiki/Changing-fonts)
+- [xaringanExtra](https://pkg.garrickadenbuie.com/xaringanExtra/#/)
+- [Welcome to xaringan gallery](https://xaringan.gallery/)
+- [lexis theme](https://xaringan.gallery/themes/lexis-theme/)
+- [How to make xaringan presentation-David Sands](https://psysandsy.github.io/xaringan-teach.html#1)
+- [xaringan官方中文幻灯片](https://slides.yihui.org/xaringan/zh-CN.html#1)
+
+- [Knitting Club: R Markdown for beginners](https://www.rostrum.blog/2018/09/24/knitting-club/)
+
+
+
+
+
+- [yongfu_Xaringan](https://yongfu.name/slides/xaringan/xaringan.pdf)
+- [laser-institute/slides-template](https://github.com/laser-institute/slides-template)
+- [Animate Xaringan Slide Transitions](https://www.garrickadenbuie.com/blog/animate-xaringan-slide-transitions/)
+- [John Little-Xaringan](https://www.johnlittle.info/#posts)
+- [Peter Baumgartner-Xaringan](https://portfolio.peter-baumgartner.net/#about)
+- [Peter Baumgartner](https://notes.peter-baumgartner.net/)
+- [Font size of code](https://github.com/yihui/xaringan/issues/69)
+
+
+
+
+
+
+- [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
+- [Chunk options and package options-yihui](https://yihui.org/knitr/options/)
+- [blogdown: Creating Websites with R Markdown](https://bookdown.org/yihui/blogdown/)
+
+
+
+
+
+
+
+相信自学的力量，觉得为满足好奇心而学习是件十分幸福的事。本站就是通过自学搭建起来的。
+
+code snippet代码段；curly bracket花括号；overlap重叠；requisite必要的；dissipate消散；
+
+enroll登记，注册；successive连续的；focal焦点的primary concern；
+
+
+Last name + et al.
+
+John Smith; Smith, J.; Smith et al.;   
+San Zhang; Zhang, S.; Zhang et al.；
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Eco Link
+
+- [IPCC Accessment Report](https://www.ipcc.ch/reports/)
+- [Global Carbon Atlas](http://www.globalcarbonatlas.org/en/content/welcome-carbon-atlas)
+- [The Global Carbon Project](https://www.globalcarbonproject.org/index.htm)
+- [WMO Statement on the State of the Global Climate](https://public.wmo.int/en/search?search_api_views_fulltext=the%20Global%20Climate)
+- [Global Forest Goals Report 2021](https://www.un.org/esa/forests/outreach/global-forests-goal-report-2021/index.html)
+- [ForestGEO Global Earth Observatory](https://www.forestgeo.si.edu/)
+- [Global Biodiversity Information Facility](https://www.gbif.org/)
+- [生物多样性与生态安全大数据平台](https://bio-one.org.cn/)
+
+
+- [青藏高原科学数据中心](https://data.tpdc.ac.cn/home)
+- [国家科技资源-生态数据中心](http://www.nesdc.org.cn/)
+- [国家林草科学数据中心](http://www.forestdata.cn/index.html)
+
+
+- [全国地理信息资源目录服务系统](https://www.webmap.cn/main.do?method=index)
+- [中国生态系统评估与生态安全格局数据库](https://www.ecosystem.csdb.cn/index.jsp)
+- [GIS数据下载合集：遥感、土壤、气象、行政区数据](https://www.cnblogs.com/fkxxgis/p/17044278.html#711-worldpop)
+- [林业专业知识服务系统](http://forest.ckcest.cn/)
+- [国家森林资源清查](http://www.forestry.gov.cn/gjslzyqc.html)
+- [Our World in Data](https://ourworldindata.org/)
+- [Global solar atlas](https://www.globalsolaratlas.info/download/china)
+- [1ppm二氧化碳等于多少mg/m3](https://www.zhihu.com/question/374305767)
+- [气候变化和人类活动对中国植被固碳的贡献量化数据（2001-2018）](https://data.tpdc.ac.cn/zh-hans/data/515d3a4d-fb66-4b56-9851-35622bac9576/)
+- [卫星地图-林场](https://www.xcditu.com/village/136605.html)
+- [黑龙江帽儿山森林生态系统国家野外科学观测研究站](http://mef.cern.ac.cn/)
+- [东林生态研究中心](https://cer.nefu.edu.cn/index.htm)
+- [生态统计，博客文章](http://statisticaldiversitylab.com/blog)
+- [全球控制实验观测数据-邱](doi.org/10.5281/zenodo.7153253)
+- [菌根类型查询](https://app.plutof.ut.ee/login?afterRegistration=false)
+
+
+
+
+# Software
+
+
+
+
+
+Set footnote
+
+```markdown
+your text[^1]
+[^1]: footnote content
+
+or, your text^[footnote content]
+```
+
+## PS
+
+- [教你用PS简单七步完成景深合成](http://leiyuyao.tuchong.com/t/43063677/)
+
+
+
+
+## Word
+
+- [Word Tips – Embedding Figures](https://martinlab.chem.umass.edu/word-tips-figures/)
+- [Endnote中的期刊引用缩写list](https://zhuanlan.zhihu.com/p/399129141)
+- [Citing and referencing: In-text citations](https://guides.lib.monash.edu/citing-referencing/APA-In-text)
+
+
+## Ai-Illustrator
+
+- [Ai指定关键对象和对齐操作](https://www.zhihu.com/zvideo/1369739500822945792)
+- [Introduction to Illustrator](https://martinlab.chem.umass.edu/illustrator-intro/)
+
+
+调整图像间距：对齐关键对象，输入间距值。
+
+Change all text font, 选择 -> 对象 -> 所有文本对象
+
+Does not display content outside the artboard, 视图 —> 裁切视图
+
+`Shift + O`，调整画板大小。
+
+
+
+
+
+
+
+## Pr-Premiere
+
+HDR标准：杜比、HDR10、HLG
+
+HDR视频需要10bit，HDR视频最需要的就是色彩空间管理功能！苹果手机拍的HDR（杜比）是基于HLG的方式来设置并添加元数据的。苹果的hevc是属于编码，也就是h265
+
+
+nit显示亮度；bit色位深度；
+
+>显示设备的HDR400，HDR600，HDR1000等，后面的数字就是尼特数，就前两年的标准来讲，600nits就可以算作是HDR标准了，特别是OLED。ipad pro约为600-800nits，imac 500nits，用这些看b站的HDR视频是可以激活HDR的
+
+广色域，针对显示设备。能有90%以上P3的覆盖还算及格，2020比P3更广，目前还没有覆盖100% 2020的
+
+色域范围由原来的REC709也提升至DCI-P3和REC2020，显示的颜色也更多，色位深度也提升至10bit以上，颜色层次过度更自然。
+
+
+由于SDR的硬件显示限制，导致拍摄的画面的亮度范围都被压缩在100nits以内，所以总觉得画面看起来不够现实生活中对比度大，真实。
+
+
+
+
+
+
+
+
+看HDR必须要有支持显示hdr的显示设备及支持的平台或浏览器（用于HDR播放解码）
+
+- 苹果12的4k hdr视频是基于HLG的杜比视界，所以只要手机支持杜比视界或者HLG就可以看到HDR，手机屏幕亮度峰值最好有800nit以上。但是要在网络平台上分享，还需要网络平台支持，目前国内自媒体平台相对好一点的只有b站
+
+- 微信不支持HDR显示，会转成普通SDR，HDR亮度峰值是SDR的10倍，明暗对比很强。
+
+- 目前B站上只支持杜比视界和HDR10; B站上，不支持杜比视界的设备暂时好像只能SDR
+
+- 如果iphone拍摄的视频在不支持hdr的设备或者平台上发布，可以选择不开HDR，因为在iphone本身的显示屏上是支持hdr显示的，峰值亮度是普通非hdr设备的10倍，所以视频一旦发送，在不支持的设备和平台上会变得很暗
+
+
+
+MOV支持H.264，所以导出（在Pr/Ae导出选择Quicktime格式）时建议选择H.264，不然无损MOV体积也及其大
+
+
+
+Pr目前导出HDR10时，元数据需要手动填写，如：最高最低亮度，平均亮度，最大内容亮度等，但PR本身不带元数据检测 `(不填写，导出视频的明暗出问题)`。只有达芬奇支持检测元数据，建议如果要制作HDR10，还是用达芬奇。如果实在需要使用PR，可以考虑使用HLG，HLG不需要元数据
+
+Pr的色彩管理真的做得很不好。达芬奇是很吃GPU的，所以对显卡要求高，而其他剪辑软件基本是吃CPU
+
+大部分转码软件都不能直接把`HDR转SDR`，可考虑达芬奇，final cut或pr等软件转，但需要设定好工程设置
+
+H265格式视频还是转成Prores编码；卡顿是跟编码有关系，尽量不要选用H265编码
+
+iphone拍摄的4K HDR视频是h265编码，基于HLG的杜比视界，可以使用达芬奇或者PR来剪辑，`设置成HLG`就可以了，WINDOWS的话输出的HDR类型`也只能是HLG`。唯一比较大的困难，可能是windows上剪H265编码的视频会很卡。
+
+可以考虑另外一种方案，直接在iphone剪辑，可使用imovie或者lumafusion，后者需要氪金！但功能很好。支持色彩空间转换，还支持log文件，需要自己导入lut，主要针对h265（hevc）编码的，180M以内的剪辑都很顺，输出也是实时的，最主要是设备支持显示HDR

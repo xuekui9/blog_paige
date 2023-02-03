@@ -23,6 +23,9 @@ title: Information
 
 <br>
 
+
+
+- 2023.2 R语言资料合集 ([HTML](https://xuekui.site/source/rweb))
 - 2022.10 专业英语：Meta群落理论 ([Slide](https://xuekui.site/metacommu/term-commu#1))
 - 2022.10 杜克风幻灯片，来自dukeslides包 ([Slide](https://xuekui.site/duke/duke_univ#1))
 - 2022.8 东林图书馆R语言书籍 ([HTML](https://xuekui.site/source/r-book-nefu))
