@@ -10,7 +10,7 @@ output:
     gallery: false
     highlight: kate
     toc_depth: 3
-    number_sections: yes # 按节编号
+    number_sections: yes  # 按节编号
 ---
 
 ```{r setup, include=FALSE}
@@ -19,7 +19,7 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse=TRUE)
 ```
 
 
-**个人主页**：[xuekui.site](xuekui.site) 
+**个人主页**：[xuekui.site](xuekui.site)
 
 
 # R Book
