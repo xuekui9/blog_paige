@@ -460,12 +460,34 @@ Add R^2^, `ggpmisc`
 
 # Markdown or Blogdown
 
+## Book
+
+- [RMarkdown for Scientists](https://rmd4sci.njtierney.com/)
+- [RMarkdown-Richard Telford](https://biostats-r.github.io/biostats/rmarkdown/index.html)
+
+
+
+
+
+## 文本、图表引用
+
+- [2.2.4 Text references](https://bookdown.org/yihui/bookdown/markdown-extensions-by-bookdown.html#text-references)
+- [2.4 Figures](https://bookdown.org/yihui/bookdown/figures.html)
+- [Referencing in RMarkdown](https://uoepsy.github.io/rmd-bootcamp/07-refs.html)
+- [Cross-referencing](https://biostats-r.github.io/biostats/rmarkdown/cross-referencing.html)
+- [4.7 Cross-referencing within documents](https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html)
+
+
+
+
+
+
 
 - [Markdown 基本语法](https://markdown.com.cn/basic-syntax/)
 - [Inline code](https://riptutorial.com/markdown/example/1802/inline-code)
 - [R Markdown 指南](https://cosname.github.io/rmarkdown-guide/)
 - [Communicate Data with R](https://communicate-data-with-r.netlify.app/docs/communicate/rmarkdown/)
-- [RMarkdown for Scientists](https://rmd4sci.njtierney.com/)
+
 - [R语言之Rmarkdown从入门到精通，庄闪闪B站](https://www.bilibili.com/video/BV1ib4y1X7r9?p=1&vd_source=ee82ebb8ba56ef71ec0ab0f564e002c6)
 - [R Markdown学习，Kai Gu](https://www.bioinfo-scrounger.com/archives/614/)
 - [能跑代码的 Markdown 编辑器——Rmarkdown](https://sspai.com/post/42841)

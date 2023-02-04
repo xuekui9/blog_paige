@@ -39,18 +39,36 @@ h2, h3, h4 {
 
 /* link */
 
-/* footer link */ 
-.text-muted a{color:var(--bs-link-color);text-decoration:none}
+a {
+  color:var(--bs-link-color);
+  text-decoration:none;}
+  
+a:hover {background-color:#cfe2ff;}  /* 鼠标移动到链接上 */
+
+
+/* Blog标题列表的链接样式 */
+.mx-auto a {
+  color:var(--bs-link-color);
+  text-decoration:none;
+  padding-bottom:1px; 
+  border-bottom:2px solid #dddddd;
+}
+
+.mx-auto a:hover {background-color:#dddddd;}
+
+
 
 
 /* 改间距，先调代码，再调整正文 */
 body {
-  margin:auto;
   padding: 1em;
   line-height: 1.75em;
   font-size: 18px;
+  margin: auto;
   /* text-align:justify; */
 }
+
+
 
 
 /* font */
