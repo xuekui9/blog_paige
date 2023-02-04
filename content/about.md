@@ -7,34 +7,26 @@ author: Hugo Authors
 
 date: "2019-02-28"
 
-description: 
-title: Information
+description: All things are difficult before they are easy.
+title: Achievement
 ---
 
-<br>
-
-**All things are difficult before they are easy.**
-
-<br>
-
-----
-
-## Some
-
-<br>
 
 
 
-- 2023.2 R语言资料合集 ([HTML](https://xuekui.site/source/rweb))
-- 2022.10 专业英语：Meta群落理论 ([Slide](https://xuekui.site/metacommu/term-commu#1))
-- 2022.10 杜克风幻灯片，来自dukeslides包 ([Slide](https://xuekui.site/duke/duke_univ#1))
-- 2022.8 东林图书馆R语言书籍 ([HTML](https://xuekui.site/source/r-book-nefu))
-- 2022.7 重复测量方差分析，R实现 ([HTML](https://xuekui.site/xknote))
+## Lists
+
+
+- 2023.02 **R语言资料合集** ([HTML](https://xuekui.site/source/rweb))
+- 2022.10 **专业英语：Meta群落理论** ([Slide](https://xuekui.site/metacommu/term-commu#1))
+- 2022.10 **杜克风幻灯片，来自dukeslides包** ([Slide](https://xuekui.site/duke/duke_univ#1))
+- 2022.08 **东林图书馆R语言书籍** ([HTML](https://xuekui.site/source/r-book-nefu))
+- 2022.07 **重复测量方差分析，R实现** ([HTML](https://xuekui.site/xknote))
 
 
 
 
-<br><br><br>
+<br><br>
 
 
 ----

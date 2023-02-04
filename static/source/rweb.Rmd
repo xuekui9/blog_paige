@@ -1,5 +1,5 @@
 ---
-title: "资料、教程，等"
+title: "R资料、教程，等"
 author: "Kui Xue"
 date: "`r Sys.Date()`"
 output:
