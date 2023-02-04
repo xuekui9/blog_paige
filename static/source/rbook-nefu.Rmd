@@ -8,8 +8,6 @@ output:
     highlight: github
     number_sections: yes #是否自动按节编号
     toc: yes # table of content
-   
- 
 ---
 
 ```{r include=FALSE}
@@ -18,7 +16,6 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse = TRUE, fig.align="ce
 ```
 
 <!-- include= FALSE, hide code chunk above. -->
-
 
 
 
