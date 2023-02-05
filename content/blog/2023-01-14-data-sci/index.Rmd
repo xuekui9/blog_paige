@@ -22,6 +22,8 @@ knitr::opts_chunk$set(warning=FALSE, message=FALSE, collapse=TRUE)
 批量t检验
 
 ```{r}
+
+# 注释是黑体吗
 library(tidyverse)
 library(rstatix)
 df = read_csv("F:/Learning_materials/R/正则/Demo_t.test.csv")

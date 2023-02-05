@@ -24,11 +24,6 @@ pre code {
 }
 
 
-blockquote {
-  background: #f9f9f9;
-  border-left: 3px solid #0085bd;
-  padding: 1em 1em 3px 1em;
-}
 
 
 h2, h3, h4 {
@@ -57,10 +52,23 @@ a:hover {
   color:#0085bd;
   text-decoration:none;
   padding-bottom:1px; 
-  border-bottom:2px solid #dddddd;
+  border-bottom:2px solid #cfe2ff;
 }
+.mx-auto a:hover {background-color:#cfe2ff;}
 
-.mx-auto a:hover {background-color:#dddddd;}
+
+/* 导航栏的链接样式 */
+.nav-pills .nav-link.active {
+  background-color: #0085bd;
+  text-decoration: none;
+}
+.nav-link{
+  color: #0085bd;
+}
+.nav-link:hover {
+  text-decoration: none;
+  color: #0085bd;
+}
 
 
 
@@ -75,6 +83,23 @@ body {
 }
 
 
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 3px solid #0085bd;
+  padding: .1em 1em .1em 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
 .body-p p{
   margin: 1.5em 0;
 }
@@ -82,13 +107,14 @@ body {
 
 
 /* font */
-
 code {
   font-family: "Source Code Pro", "Lucida Console", Monaco, monospace;
 }
 pre code {
   font-family: "Lucida Console", SimHei, Monaco, monospace;
 }
+
+
 
 
 /* Auto Numbering */

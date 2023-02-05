@@ -154,7 +154,7 @@ SPSS统计分析-张文彤；
 
 - [张金龙-R教程](https://github.com/Hello-BD/R-in-brief)
 - [米大鼠-RPubs教程](https://rpubs.com/maomaoworm)
-
+- [RFUN-An R Learning Series](https://rfun.library.duke.edu/)
 
 
 
@@ -410,6 +410,7 @@ Add R^2^, `ggpmisc`
 - [王诗翔](https://shixiangwang.github.io/home/cn/writing/)
 - [庄闪闪](https://zll-blog.netlify.app/)
 - [黄湘云](https://xiangyun.rbind.io/)
+- [胡华平](https://huhuaping.com/)
 - [谢益辉](https://yihui.org/)
 - [yuzaR](https://yuzar-blog.netlify.app/)
 - [Danielle Navarro-Data Science](https://blog.djnavarro.net/)
@@ -417,6 +418,7 @@ Add R^2^, `ggpmisc`
 - [Yan tao](https://taoyan.netlify.app/post/)
 - [梅卫平-R语言](https://meiweiping.cn/)
 - [叶寻-文笔](https://cyrusyip.org/zh-cn/)
+- [一笼虾饺有四个-文字](https://fourxiajiao.github.io/)
 - [于淼](https://yufree.cn/)
 - [刘思喆](https://bjt.name/archives/)
 - [yongfuLiao](https://yongfu.name/)
@@ -490,6 +492,54 @@ Add R^2^, `ggpmisc`
 - [Hugo支持MathJax的配置](https://blog.csdn.net/weixin_42465278/article/details/117368615)
 - [How to Add Math Expressions to Hugo](https://www.mrnice.dev/posts/how-to-add-math-expressions-to-hugo-blog-the-shortest-guide-possible/)
 - [Add MathJax v3 Support to Jekyll and Hugo](https://www.bodunhu.com/blog/posts/add-mathjax-v3-support-to-jekyll-and-hugo/)
+- [Support Latex Math Expressions](https://swsmile.info/post/hugo-support-latex-math-expressions/)
+
+
+
+
+## 标题自动编号
+
+- [Auto number Headings & TOC in Hugo Pages](https://codingnconcepts.com/hugo/auto-number-headings-hugo/)
+- [Hugo博客添加自动编号](https://www.shaohanyun.top/posts/env/hugo_autonumber/)
+
+
+## Style with css
+
+
+- [how to write CSS to style your Hugo site](https://hugo-mini-course.netlify.app/sections/styling/custom/)
+
+上述链接是一套Hugo建站课程
+
+- [How to Edit, Customize, and Override Bootstrap CSS](https://blog.hubspot.com/website/how-to-override-bootstrap-css#how-to-customize-bootstrap-css-overrides)
+- [Hugo中添加代码高亮支持](https://note.qidong.name/2017/06/24/hugo-highlight/)
+
+- [BootCDN](https://www.bootcdn.cn/)
+- [jsdelivr CDN](https://www.jsdelivr.com/)
+- [Staticfile CDN](https://staticfile.org/)
+- [75 CDN](https://cdn.baomitu.com/)
+
+
+## favicon/Logo
+
+- [图标图片](https://skyao.io/learning-hugo/docsy/content/iconsimages.html)
+- [利用Favicon为Hugo静态站点添加图标](https://ibrights.github.io/post/blog20210527/)
+- [Add Favicon to a Hugo-Based Website](https://www.chingono.com/blog/2022/03/27/adding-favicon-hugo-site/)
+- [Add Favicon to Hugo-Based Website](https://www.kiroule.com/article/add-favicon-to-hugo-based-website/)
+- [how to add a favicon to your hugo site](https://www.enthuseandinspire.co.uk/blog/favicon/)
+
+
+
+
+
+
+## 建站资料
+
+- [Hugo学习笔记](https://skyao.io/learning-hugo/docs/introduction/information.html)
+- [Blog养成记-多篇](https://orianna-zzo.github.io/series/blog%E5%85%BB%E6%88%90%E8%AE%B0/)
+- [不是从零开始的 Hugo 建站笔记](https://fourxiajiao.github.io/2022/hugo-blog/)
+- [All Posts About Hugo](https://codingnconcepts.com/hugo/)
+- [Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane#quick-start)
+
 
 
 
