@@ -480,6 +480,16 @@ Add R^2^, `ggpmisc`
 
 
 
+## MathJax Support
+
+- [在Hugo中使用MathJax](https://note.qidong.name/2018/03/hugo-mathjax/)
+- [Hugo中支持LaTeX的数学表达式](https://jiguankai.cn/post/hugo_mathJax/)
+- [Render LaTeX math expressions in Hugo with MathJax 3](https://geoffruddock.com/math-typesetting-in-hugo/)
+- [Hugo 静态博客中迄今为止最佳数学公式支持](https://butui.me/posts/yet-best-math-formula-support-for-hugo-with-mathjax/)
+- [Enable math expressions (LaTeX) on blogdown/Hugo blog](https://community.rstudio.com/t/enable-math-expressions-latex-on-blogdown-hugo-blog/18894)
+- [Hugo支持MathJax的配置](https://blog.csdn.net/weixin_42465278/article/details/117368615)
+- [How to Add Math Expressions to Hugo](https://www.mrnice.dev/posts/how-to-add-math-expressions-to-hugo-blog-the-shortest-guide-possible/)
+- [Add MathJax v3 Support to Jekyll and Hugo](https://www.bodunhu.com/blog/posts/add-mathjax-v3-support-to-jekyll-and-hugo/)
 
 
 

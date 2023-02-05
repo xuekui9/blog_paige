@@ -59,6 +59,7 @@ social:
 theme: paige
 timezone: Asia/Shanghai
 title: Kui Xue丨薛奎
+enableEmoji: true
 titlecasestyle: Go
 ignoreFiles:
   - \.Rmd$

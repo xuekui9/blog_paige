@@ -9,14 +9,19 @@ tags:
 description: ''
 keywords: []
 link: ''
+math: true
 ---
 
+
+:see_no_evil:
 
 [R6官方手册](https://cam.start.canon/zh/C004/)
 
 
 
-## 常用按键操作
+## 几点常用操作 
+
+
 
 1. 先调整屈光度。确保在取景器中看到的是清晰的
 
@@ -52,7 +57,7 @@ i. 用取景器拍摄，同时手滑动屏幕，很容易调整对焦点。
 6. 安装背带(Fig \@ref(fig:strap))
 
 
-```{r strap, out.width="100%", fig.cap='Attaching the Strap'}
+```{r strap, out.width="100%", fig.cap='Attaching the Strap安装背带示意图'}
 knitr::include_graphics("images/UG-00_i0220.png")
 ```
 

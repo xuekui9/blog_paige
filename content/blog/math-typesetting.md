@@ -1,13 +1,62 @@
 ---
 author: Hugo Authors
 date: "2019-03-08"
-description: A brief guide to setup KaTeX
+description: A brief guide to setup MathJax
 math: true
 title: Math Typesetting
 ---
 
 Mathematical notation in a Hugo project can be enabled by using third party JavaScript libraries.
 <!--more-->
+
+## Setup MathJax
+
+Create a file named `mathjax.html` in your theme directory of .../themes/[theme_name]/layouts/partials/.
+
+Add the code to `mathjax.html` as the following:
+
+
+
+代码是用来渲染LaTeX数学公式的JavaScript代码。它使用了MathJax库，用于在网页中呈现漂亮的数学公式。代码定义了MathJax的配置，并加载了MathJax库。
+
+
+
+```js
+{{ if .Params.math }}
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [["$", "$"], ['\\(', '\\)']],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+    },
+    svg: {
+      fontCache: "global"
+    },
+  };
+</script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+<script 
+  type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+{{ end }}
+```
+
+
+Next, open the file .../themes/[theme_name]/layouts/partials/baseof.html and add the following line just before the closing `</head>` tag:
+
+```bash
+{{ partial "mathjax.html" . }}
+```
+
+Finally, add `math: true` to the YAML frontmatter of any pages containing math markup.
+
+---
+
+## Setup KaTeX
+
 
 In this example we will be using [KaTeX](https://katex.org/)
 
@@ -26,6 +75,9 @@ In this example we will be using [KaTeX](https://katex.org/)
 
 **Note:** Use the online reference of [Supported TeX Functions](https://katex.org/docs/supported.html)
 
+
+
+
 {{< math.inline >}}
 {{ if or .Page.Params.math .Site.Params.math }}
 <!-- KaTeX -->
@@ -35,13 +87,20 @@ In this example we will be using [KaTeX](https://katex.org/)
 {{ end }}
 {{</ math.inline >}}
 
+
+
+
 ### Examples
+
+
 
 {{< math.inline >}}
 <p>
 Inline math: \(\varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887…\)
 </p>
 {{</ math.inline >}}
+
+
 
 Block math:
 $$
