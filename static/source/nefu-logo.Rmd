@@ -1,0 +1,77 @@
+---
+title: "NEFU Logo"
+author: "Kui Xue"
+date: "2022-08-01"
+output:
+  prettydoc::html_pretty:
+    theme: hpstr
+    highlight: github
+    number_sections: yes #是否自动按节编号
+    toc: yes # table of content
+---
+
+```{r include=FALSE}
+library(tidyverse)
+knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse = TRUE, fig.align="center", out.width = "200px")
+```
+
+<!-- include= FALSE, hide code chunk above. -->
+
+
+# NEFU-LOGO
+
+
+## 右击保存，下载使用
+
+
+
+```{r fig.cap="这是图1"}
+knitr::include_graphics("nefu_badge/nefu2.svg")
+```
+
+
+
+```{r fig.cap="这是图2"}
+knitr::include_graphics("nefu_badge/nefu3.svg")
+```
+
+```{r }
+knitr::include_graphics("nefu_badge/nefu-hb.svg")
+```
+
+
+```{r }
+knitr::include_graphics("nefu_badge/nefu4.svg")
+```
+
+
+```{r }
+knitr::include_graphics("nefu_badge/nefu5.svg")
+```
+
+
+
+```{r }
+knitr::include_graphics("nefu_badge/nefu8.svg")
+```
+
+
+## 以下空白区域，也是Logo（白色的）
+
+
+```{r fig.cap="这里是图1的白色版本"}
+knitr::include_graphics("nefu_badge/nefu1.svg")
+```
+
+
+```{r fig.cap="这里是图2的白色版本"}
+knitr::include_graphics("nefu_badge/nefu-hw.svg")
+```
+
+
+
+
+
+
+
+更多内容见：[NEFU-校园文化](https://culture.nefu.edu.cn/index.htm)
