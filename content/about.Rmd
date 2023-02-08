@@ -19,7 +19,7 @@ link: ''
 - 2022.10 **专业英语：Meta群落理论** ([Slide](https://xuekui.site/metacommu/term-commu#1))
 - 2022.10 **杜克风幻灯片，来自dukeslides包** ([Slide](https://xuekui.site/duke/duke_univ#1))
 - 2022.08 **东林图书馆R语言书籍** ([HTML](https://xuekui.site/source/rbook-nefu))
-
+- 2022.08 **东林校徽Logo** ([HTML](https://xuekui.site/source/nefu-logo))
 
 
 
