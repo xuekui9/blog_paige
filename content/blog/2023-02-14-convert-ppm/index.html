@@ -1,0 +1,47 @@
+---
+title: 土壤呼吸，ppm单位换算
+author: ''
+date: '2023-02-14'
+slug: convert-ppm
+categories: []
+tags:
+  - ecology
+description: ''
+keywords: []
+link: ''
+math: true
+---
+
+
+
+<p>刚进实验室那会儿为了解决这个问题就费了一番周折，跟师姐。我以为我搞懂了</p>
+<p>我觉得是一个非常重要的问题，但却经不起细究，理解更是捉襟见肘。我根本没懂</p>
+<p>在草纸上重复写着分式和推导过程，写了一天。更困惑了</p>
+<p>晚饭前终于理出了一条思路。与姜师兄讨论时却是用另一条思路讲的，虽然讲的磕磕绊绊。但明显更容易理解。第一条思路绕来绕去，实在看不下去了，一点都不简洁和顺畅。</p>
+<p>哈尔滨的妖风，和兴路的拥堵，还有让楠姐期待的“有滋有味小菜馆”……</p>
+<p>终于解决了。充实的一天</p>
+<div id="土壤呼吸速率的计算" class="section level2">
+<h2>土壤呼吸速率的计算</h2>
+<p><a href="http://www.szwandi.cn/news/2638">ppm单位换算_ppm换算成mg/m3</a></p>
+<p><strong>经仪器测得，时间段t内CO<sub>2</sub>的浓度增加了x ppm。培养瓶的顶空体积为V (mL)，培养的样品质量为m。如何计算这段时间的土壤呼吸速率？</strong></p>
+<p>体积浓度表示法：<strong>一百万体积</strong>的空气中所含气体的体积数，即ppm；那么：</p>
+<p><span class="math display">\[ppm = \frac{1}{10^6}  = \frac{1cm^3}{1m^3} = \frac{1\mu L}{1L}\]</span></p>
+<ol style="list-style-type: decimal">
+<li>假设气体浓度变化了<strong>x (ppm)</strong>，那么：</li>
+</ol>
+<p><span class="math display">\[x \ ppm  =  \frac{x \ \mu L}{1L} = x (\frac{\mu L}{L})\]</span></p>
+<p>以上的结果中，单位<span class="math inline">\(\mu L/L\)</span> 指代的是在某一时间段内，<strong>单位体积，气体的体积变化了<span class="math inline">\(x (\mu L)\)</span>。</strong></p>
+<ol start="2" style="list-style-type: decimal">
+<li>假如培养瓶顶空的体积为<span class="math inline">\(V (mL)\)</span>，那么在这段时间，<strong>培养瓶中气体体积改变了多少？</strong></li>
+</ol>
+<p><span class="math display">\[x \ ppm * V  = \frac{x V}{10^3}(\mu L)\]</span></p>
+<p>由于<span class="math inline">\(n = \frac{V}{V_m} = \frac{V}{22.4}\)</span>， 可计算出<strong>培养瓶中气体，物质的量变化了：</strong></p>
+<p><span class="math display">\[\frac{x \ ppm * V }{22.4} = \frac{x V}{10^3 * 22.4}(\mu mol)\]</span></p>
+<p>物质的量乘以摩尔质量，可得到<strong>培养瓶中气体质量的变化：</strong></p>
+<p><span class="math display">\[\frac{x \ ppm * V *M}{22.4} = \frac{x V M}{10^3 * 22.4}(\mu g) = \frac{x V M}{10^6 * 22.4}(mg)\]</span></p>
+<ol start="3" style="list-style-type: decimal">
+<li><strong>最后计算单位时间单位土壤，土壤呼吸排出了多少质量的气体？</strong></li>
+</ol>
+<p><span class="math display">\[\frac{x V M}{10^6 * 22.4 * t * m} (mg  \ g \ soil^{-1} \  h^{-1}) = \frac{1}{10^6}\frac{x}{t} \frac{V}{22.4} \frac{M}{m}\]</span></p>
+<p>其中时间段t单位为h；培养的土壤样品质量为m</p>
+</div>

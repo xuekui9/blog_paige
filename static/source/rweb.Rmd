@@ -697,6 +697,12 @@ or, your text^[footnote content]
 - [教你用PS简单七步完成景深合成](http://leiyuyao.tuchong.com/t/43063677/)
 
 
+## Acrobat DC
+
+
+使用Acrobat时，怎样使其默认页面显示方式为启用滚动
+
+- 编辑——首选项——辅助工具——在“忽略页面显示”下的“总是使用页面布局样式”前面打对号——并在下拉式列表框中选择“单页连续”。
 
 
 ## Word
