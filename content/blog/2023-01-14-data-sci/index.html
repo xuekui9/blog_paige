@@ -9,15 +9,43 @@ tags: []
 description: ''
 keywords: []
 link: ''
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#分组操作" id="toc-分组操作"><span class="toc-section-number">1</span> 分组操作</a></li>
+<li><a href="#同时操作多列" id="toc-同时操作多列"><span class="toc-section-number">2</span> 同时操作多列</a></li>
+<li><a href="#操作行筛选行" id="toc-操作行筛选行"><span class="toc-section-number">3</span> 操作行/筛选行</a></li>
+<li><a href="#操作列筛选列" id="toc-操作列筛选列"><span class="toc-section-number">4</span> 操作列/筛选列</a></li>
+<li><a href="#正则表达式" id="toc-正则表达式"><span class="toc-section-number">5</span> 正则表达式</a>
+<ul>
+<li><a href="#za" id="toc-za"><span class="toc-section-number">5.1</span> za</a></li>
+</ul></li>
+</ul>
+</div>
 
-<div id="分组操作" class="section level3">
-<h3>分组操作</h3>
+<div id="分组操作" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> 分组操作</h1>
+<p>对数据框进行分组，并添加组号</p>
+<pre class="r"><code>tibble(col= c(&quot;A&quot;, &quot;A&quot;, &quot;B&quot;, &quot;B&quot;, &quot;C&quot;)) %&gt;% 
+  group_by(col) %&gt;% 
+  mutate(grp = cur_group_id())
+## # A tibble: 5 × 2
+## # Groups:   col [3]
+##   col     grp
+##   &lt;chr&gt; &lt;int&gt;
+## 1 A         1
+## 2 A         1
+## 3 B         2
+## 4 B         2
+## 5 C         3</code></pre>
 <p>批量t检验</p>
-<pre class="r"><code>
-# 注释是黑体吗
+<pre class="r"><code># 注释是黑体吗
 library(tidyverse)
 library(rstatix)
 df = read_csv(&quot;F:/Learning_materials/R/正则/Demo_t.test.csv&quot;)
@@ -162,11 +190,144 @@ economics %&gt;%
 ## 10  1968 4月  544 
 ## # … with 564 more rows</code></pre>
 </div>
-<div id="筛选列" class="section level2">
-<h2>筛选列</h2>
-<p>去除所有元素都是”AAA”所在的列</p>
-<pre class="r"><code>df= tibble(x= rep(&quot;AAA&quot;, 5), y = 1:5,
-       z= c(rep(&quot;AAA&quot;, 3), &quot;b&quot;, &quot;c&quot;))
+<div id="同时操作多列" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> 同时操作多列</h1>
+<p>所有的.替换为0</p>
+<p>匿名函数(lambda)写法。</p>
+<p>The parameters of across function are <code>.col</code>, <code>.fns</code>, <code>...</code>, respectively. Generally, we should input the parameters in order if we want to omit the names of these parameters.</p>
+<p>The first parameter “.col” has a default value (i.e. everything() ). If we don’t need to modify “.col”, we can completely omit it.</p>
+<p>The following function (~ str_replace_all() ), however, will be mistakenly identified as “.col” parameter due to it being input first. So we must add the corresponding name to that parameter, <em>.fns = ~ str_replace_all()</em>. 如果不加.fns=，函数会被误认为是.col的参数，导致出错。</p>
+<pre class="r"><code>df
+##    A    B
+## 1 X. X..X
+## 2 Y. Y..Y
+df %&gt;% 
+  mutate(across(.fns= ~ str_replace_all(.x, &quot;\\.&quot;, &quot;0&quot;)))
+##    A    B
+## 1 X0 X00X
+## 2 Y0 Y00Y
+df %&gt;% 
+  mutate(across(.fns= str_replace_all, pattern= &quot;\\.&quot;, replacement= &quot;0&quot;))
+##    A    B
+## 1 X0 X00X
+## 2 Y0 Y00Y</code></pre>
+</div>
+<div id="操作行筛选行" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> 操作行/筛选行</h1>
+<ol style="list-style-type: decimal">
+<li>Remove row containing repeat elements</li>
+</ol>
+<pre class="r"><code>df= data.frame(A= 1:4, B= c(2, 3, 4, 3), C= c(10, 10, 4, 1), D= c(4, 2, 4, 6))
+df
+##   A B  C D
+## 1 1 2 10 4
+## 2 2 3 10 2
+## 3 3 4  4 4
+## 4 4 3  1 6
+df %&gt;% 
+   filter(! pmap_lgl(., ~ duplicated(c(...)) %&gt;% any() ))
+##   A B  C D
+## 1 1 2 10 4
+## 2 4 3  1 6
+df %&gt;% 
+   filter(pmap_lgl(., ~ length(unique(c(...))) == length(c(...)) ))
+##   A B  C D
+## 1 1 2 10 4
+## 2 4 3  1 6</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Repeat each row N times</li>
+</ol>
+<p>The first row is duplicated twice; Second and third row repeat three times and once, respectively.</p>
+<pre class="r"><code>df= tibble(A= c(0.56, 4.33, 5.81), N= c(2, 3, 1))
+df
+## # A tibble: 3 × 2
+##       A     N
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1  0.56     2
+## 2  4.33     3
+## 3  5.81     1
+df %&gt;% 
+  slice(rep(1:n(), times= N)) # slice(1, 1, 2, 2, 2, 3)
+## # A tibble: 6 × 2
+##       A     N
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1  0.56     2
+## 2  0.56     2
+## 3  4.33     3
+## 4  4.33     3
+## 5  4.33     3
+## 6  5.81     1
+df[rep(1:nrow(df), df$N), ] # Basic syntax
+## # A tibble: 6 × 2
+##       A     N
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1  0.56     2
+## 2  0.56     2
+## 3  4.33     3
+## 4  4.33     3
+## 5  4.33     3
+## 6  5.81     1</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Merge the elements of columns into one column, excluding NA.</li>
+</ol>
+<pre class="r"><code>df
+## # A tibble: 4 × 4
+##       A     B     C     D
+##   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1     1     2    10     4
+## 2     2    NA    10     2
+## 3    NA     4     4     4
+## 4     4    NA     1    NA
+f= function(x) {
+  x[!is.na(x)] %&gt;% 
+    paste0(., collapse= &quot;-&quot;)
+}
+df %&gt;% 
+  mutate(new= pmap_chr(., ~ f(c(...))))
+## # A tibble: 4 × 5
+##       A     B     C     D new     
+##   &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;   
+## 1     1     2    10     4 1-2-10-4
+## 2     2    NA    10     2 2-10-2  
+## 3    NA     4     4     4 4-4-4   
+## 4     4    NA     1    NA 4-1</code></pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Replace the last non-NA value of each row with NA</li>
+</ol>
+<pre class="r"><code>df= tibble(A= c(200.79, NA, 193.2, NA), B= c(NA, NA, &quot;C9LL&quot;, &quot;WP45&quot;), C= NA, D= c(4.326, NA, NA, NA))
+df
+## # A tibble: 4 × 4
+##       A B     C         D
+##   &lt;dbl&gt; &lt;chr&gt; &lt;lgl&gt; &lt;dbl&gt;
+## 1  201. &lt;NA&gt;  NA     4.33
+## 2   NA  &lt;NA&gt;  NA    NA   
+## 3  193. C9LL  NA    NA   
+## 4   NA  WP45  NA    NA
+f= function(x) {
+  if (all(is.na(x))) x
+  else {
+    n= length(x)
+    while(is.na(x[n])) n= n-1
+    x[n]= NA
+    x
+  }
+}
+df %&gt;% 
+  pmap_dfr(., ~ f(c(...)))
+## # A tibble: 4 × 4
+##   A      B     C     D    
+##   &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
+## 1 200.79 &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
+## 2 &lt;NA&gt;   &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
+## 3 193.2  &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt; 
+## 4 &lt;NA&gt;   &lt;NA&gt;  &lt;NA&gt;  &lt;NA&gt;</code></pre>
+</div>
+<div id="操作列筛选列" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> 操作列/筛选列</h1>
+<ol style="list-style-type: decimal">
+<li>Remove the column that all elements are “AAA”</li>
+</ol>
+<pre class="r"><code>df= tibble(x= rep(&quot;AAA&quot;, 5), y = 1:5, z= c(rep(&quot;AAA&quot;, 3), &quot;b&quot;, &quot;c&quot;))
 df
 ## # A tibble: 5 × 3
 ##   x         y z    
@@ -189,8 +350,27 @@ df %&gt;%
 <p>.x == “AAA”是判断语句，判断每个列向量是否等于”AAA”，返回的结果是与列向量等长度的逻辑向量。比如z列的结果是T T T F F。</p>
 <p>配合all函数。只有当逻辑向量中全为TRUE，<code>all(逻辑向量)</code>的结果才是TRUE。那么y列、z列的结果都是FALSE。这样一来，结果为TRUE的列才会被保留，其余列都会被筛除。</p>
 <p>而我们想要的结果相反，是想筛除x列，保留y z列。所以我们用<code>!</code>符号，反向选择。</p>
-<div id="正则表达式" class="section level3">
-<h3>正则表达式</h3>
+<ol start="2" style="list-style-type: decimal">
+<li>Remove the column where all elements are NA</li>
+</ol>
+<pre class="r"><code>df
+## # A tibble: 3 × 4
+##   x         y z     w    
+##   &lt;lgl&gt; &lt;int&gt; &lt;lgl&gt; &lt;chr&gt;
+## 1 NA        1 NA    &lt;NA&gt; 
+## 2 NA        2 NA    B    
+## 3 NA        3 NA    C
+df %&gt;% 
+  select(where(~ !all(is.na(.x))))
+## # A tibble: 3 × 2
+##       y w    
+##   &lt;int&gt; &lt;chr&gt;
+## 1     1 &lt;NA&gt; 
+## 2     2 B    
+## 3     3 C</code></pre>
+</div>
+<div id="正则表达式" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> 正则表达式</h1>
 <ul>
 <li>找出数值</li>
 <li>找出紧跟在b后的数值</li>
@@ -217,9 +397,8 @@ str_extract_all(tt, &quot;\\d+&quot;)
 ## [1] &quot;0&quot; &quot;3&quot; &quot;4&quot;
 str_extract(tt, &quot;(?&lt;=b)\\d+&quot;)
 ## [1] &quot;1&quot;  NA   NA   &quot;76&quot; NA   &quot;3&quot;</code></pre>
-</div>
-<div id="za" class="section level3">
-<h3>za</h3>
+<div id="za" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> za</h2>
 <p><code>length&lt;-</code>是R自带函数，赋以长度的意思，后面max语句是作为实参传入</p>
 <p>将数据框中每个单元格中的数分别相加，但不含第一个数</p>
 <blockquote>
@@ -265,5 +444,8 @@ df %&gt;%
 ## 1 2005-01-20 2005-01-20
 ## 2 2018-09-03 NA</code></pre>
 <p>使用<code>if_else</code>时，须注意重编码后的数据类型，要与初始的数据类型保持一致。那么如果要替换成NA，严格来说要换成NA_character_、NA_real_(double型缺失值)。而<code>NA_Date_</code>的使用，要加载lubridate包。</p>
+<p>文本挖掘quanteda包</p>
+<p>如何修改函数源码？trace函数</p>
+<pre class="r"><code>trace(rstatix:::as_tidy_cor, edit = TRUE)</code></pre>
 </div>
 </div>

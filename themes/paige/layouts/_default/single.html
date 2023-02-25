@@ -4,7 +4,7 @@
     <h1 class="display-5 fw-bold text-center">Nothing Here</h1>
 </section>
 {{ else }}
-<article class="post" {{- if .Param "autonumbering" }} autonumbering {{- end }}>
+<article>
     {{ if or .Title .Description .PublishDate }}
     <header>
         <div class="justify-content-center row">

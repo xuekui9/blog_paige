@@ -282,7 +282,7 @@ SPSS统计分析-张文彤；
 
 
 - [R graph gallery](http://r-graph-gallery.com/index.html)
-
+- [Cartesian coordiantes with coord_cartesian](https://r-charts.com/ggplot2/coordinate-systems/#:~:text=By%20default%2C%20ggplot2%20charts%20have%20cartesian%20coordinate.%20However%2C,and%20hence%20the%20calculated%20stats%2C%20as%20shown%20below.)
 - [ggplot2学习笔记系列之主题（theme）设置](https://blog.csdn.net/kMD8d5R/article/details/79386843?ops_request_misc=&request_id=&biz_id=102&utm_term=r%E8%AF%AD%E8%A8%80panel.border=%20element_rect&utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduweb~default-0-79386843.first_rank_v2_pc_rank_v29&spm=1018.2226.3001.4187)
 - [Spacing between legend keys in ggplot](https://stackoom.com/en/question/3VGYm)
 - [How to Change Spacing Between Legend Items in ggplot2](https://www.statology.org/ggplot-legend-spacing/)
@@ -429,7 +429,10 @@ Add R^2^, `ggpmisc`
 - [张金龙](https://blog.sciencenet.cn/u/zjlcas)
 - [李欣海](https://blog.sciencenet.cn/u/lixinhai)
 - [Jimmy那些事儿](https://chf2012.github.io/)
-
+- [Amber Thomas](https://amber.rbind.io/)
+- [Live free or dichotomize](https://livefreeordichotomize.com/)
+- [Rob J Hyndman](https://robjhyndman.com/)
+- [emi tanaka](https://emitanaka.org/)
 
 #   Tools/混杂
 
@@ -479,7 +482,10 @@ Add R^2^, `ggpmisc`
 - [Cross-referencing](https://biostats-r.github.io/biostats/rmarkdown/cross-referencing.html)
 - [4.7 Cross-referencing within documents](https://bookdown.org/yihui/rmarkdown-cookbook/cross-ref.html)
 
+## 参考文献引用
 
+- [4.5 Bibliographies and citations](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html)
+- [5 Bibliographies](https://bookdown.org/fmcron/Rhodes-template/bibliographies.html)
 
 
 ## MathJax Support
@@ -512,6 +518,9 @@ Add R^2^, `ggpmisc`
 
 - [How to Edit, Customize, and Override Bootstrap CSS](https://blog.hubspot.com/website/how-to-override-bootstrap-css#how-to-customize-bootstrap-css-overrides)
 - [Hugo中添加代码高亮支持](https://note.qidong.name/2017/06/24/hugo-highlight/)
+- [Enable syntax highlighting via highlight.js](https://bookdown.org/yihui/blogdown/templates.html#how-to)
+- [Adding Syntax Highlighting to Blogdown Posts](https://amber.rbind.io/2017/11/15/syntaxhighlighting/)
+
 
 - [BootCDN](https://www.bootcdn.cn/)
 - [jsdelivr CDN](https://www.jsdelivr.com/)
@@ -539,6 +548,10 @@ Add R^2^, `ggpmisc`
 - [不是从零开始的 Hugo 建站笔记](https://fourxiajiao.github.io/2022/hugo-blog/)
 - [All Posts About Hugo](https://codingnconcepts.com/hugo/)
 - [Hugo-theme-jane](https://github.com/xianmin/hugo-theme-jane#quick-start)
+- [List of helpful Blogdown & Hugo tutorials](https://www.martinasladek.co.uk/post/list-of-useful-blogdown-hugo-tutorials/)
+
+
+
 
 
 
@@ -547,6 +560,10 @@ Add R^2^, `ggpmisc`
 - [Inline code](https://riptutorial.com/markdown/example/1802/inline-code)
 - [R Markdown 指南](https://cosname.github.io/rmarkdown-guide/)
 - [Communicate Data with R](https://communicate-data-with-r.netlify.app/docs/communicate/rmarkdown/)
+- [An introduction to R Markdown](https://bookdown.org/fmcron/Rhodes-template/)
+
+
+
 
 - [R语言之Rmarkdown从入门到精通，庄闪闪B站](https://www.bilibili.com/video/BV1ib4y1X7r9?p=1&vd_source=ee82ebb8ba56ef71ec0ab0f564e002c6)
 - [R Markdown学习，Kai Gu](https://www.bioinfo-scrounger.com/archives/614/)
@@ -726,7 +743,7 @@ Does not display content outside the artboard, 视图 —> 裁切视图
 
 `Shift + O`，调整画板大小。
 
-
+调整画板大小：有时候不需要图片周围的空白，就需要选中建立的图片，点击「对象」-「画板」-「适合选中的图稿」
 
 
 
