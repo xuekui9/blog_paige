@@ -6,7 +6,10 @@ institute: "RStudio, PBC"
 date: "2016/12/12"
 output:
   xaringan::moon_reader:
-    css: [default, my-theme.css, my-font.css]
+    css: 
+      - default
+      - libs/my-theme.css
+      - libs/my-font.css
     lib_dir: libs
     seal: false
     # self_contained: false # if true, fonts will be stored locally
@@ -42,7 +45,7 @@ BibOptions(check.entries = FALSE,
            no.print.fields= c("doi", "url", "issn", "pages"),
            hyperlink = TRUE,
            dashed = FALSE)
-myrefs= ReadBib("myref.bib", check= FALSE)
+myrefs= ReadBib("bibs.bib", check= FALSE)
 ```
 
 
