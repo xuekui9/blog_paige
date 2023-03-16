@@ -8,11 +8,11 @@ output:
     lib_dir: libs
     css: 
       - default
-      - default-fonts
-      - duke-blue
-      - hygge-duke
-      - libs/cc-fonts.css
-      - libs/figure-captions.css
+      - cssmisc/default-fonts.css
+      - cssmisc/duke-blue.css
+      - cssmisc/hygge-duke.css
+      - cssmisc/cc-fonts.css
+      - cssmisc/figure-captions.css
     nature:
       highlightStyle: github
       highlightLines: true
@@ -20,6 +20,9 @@ output:
 ---
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+    fig.path = "figs-chunk/"
+)
 ```
 class: center, middle
 
