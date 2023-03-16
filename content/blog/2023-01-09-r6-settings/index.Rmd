@@ -18,7 +18,6 @@ math: true
 [R6官方手册](https://cam.start.canon/zh/C004/)
 
 
-
 ## 几点常用操作 
 
 
