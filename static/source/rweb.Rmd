@@ -714,6 +714,11 @@ or, your text^[footnote content]
 - [教你用PS简单七步完成景深合成](http://leiyuyao.tuchong.com/t/43063677/)
 
 
+- [调整画布大小](https://zhuanlan.zhihu.com/p/129290032)：图像，画布大小
+
+
+
+
 ## Acrobat DC
 
 
