@@ -16,8 +16,9 @@ link: ''
 
 - 2023.02 **R语言初学者指南** ([PDF](https://xuekui.site/begin-r.pdf))
 - 2023.02 **R语言资料合集** ([HTML](https://xuekui.site/source/rweb))
-- 2022.10 **专业英语：Meta群落理论** ([Slide](https://xuekui.site/metacommu/term-commu#1))
-- 2022.10 **杜克风幻灯片，来自dukeslides包** ([Slide](https://xuekui.site/about/duke/duke_univ#1))
+- 2022.10 **专业英语：Meta群落理论** ([Slide](https://xuekui.site/about/metacommunity))
+- 2022.10 **杜克风幻灯片，来自dukeslides包** ([Slide](https://xuekui.site/about/duke))
+- 2022.10 **Xaringan幻灯片-lexis主题** ([Slide](https://xuekui.site/about/lexis-demo-16-9))
 - 2022.08 **东林图书馆R语言书籍** ([HTML](https://xuekui.site/source/rbook-nefu))
 - 2022.08 **东林校徽Logo** ([HTML](https://xuekui.site/source/nefu-logo))
 
