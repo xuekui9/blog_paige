@@ -56,7 +56,7 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse=TRUE)
 - [The Grammar of Experimental Designs](https://emitanaka.org/edibble-book/)
 
 - [R for beginners](https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf)
-
+- [YaRrr! The Pirate’s Guide to R](https://bookdown.org/ndphillips/YaRrr/)
 
 
 
@@ -66,6 +66,8 @@ knitr::opts_chunk$set(warning=FALSE,message=FALSE,collapse=TRUE)
 - [Doing Meta-Analysis with R: A Hands-On Guide](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/)
 - [Meta-analysis of Ecological Data in R](https://bookdown.org/robcrystalornelas/meta-analysis_of_ecological_data/)
 - Handbook of Meta-Analysis in Ecology and Evolution
+- [Meta-Workflow](https://bookdown.org/yufree/Metabolomics/)
+- [R Code for Meta-Analysis Books](https://github.com/wviechtb/meta_analysis_books)
 
 
 
@@ -260,7 +262,7 @@ SPSS统计分析-张文彤；
 - [Statistical Inference via Data Science: A ModernDive into R and the Tidyverse](https://moderndive.com/)
 - [Learning Statistics with R](https://learningstatisticswithr.com/)
 - [Foundations of Statistics with R](https://bookdown.org/speegled/foundations-of-statistics/)
-
+- [Computer-age Calculus with R](https://dtkaplan.github.io/RforCalculus/)
 
 
 
@@ -499,8 +501,8 @@ Add R^2^, `ggpmisc`
 - [How to Add Math Expressions to Hugo](https://www.mrnice.dev/posts/how-to-add-math-expressions-to-hugo-blog-the-shortest-guide-possible/)
 - [Add MathJax v3 Support to Jekyll and Hugo](https://www.bodunhu.com/blog/posts/add-mathjax-v3-support-to-jekyll-and-hugo/)
 - [Support Latex Math Expressions](https://swsmile.info/post/hugo-support-latex-math-expressions/)
-
-
+- [Mathematics in R Markdown](https://rpruim.github.io/s341/S19/from-class/MathinRmd.html)
+- [Latex数学符号对应表](https://www.cnblogs.com/dingdangsunny/p/12312966.html)
 
 
 ## 标题自动编号

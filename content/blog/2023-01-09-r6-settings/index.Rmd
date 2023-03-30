@@ -237,7 +237,7 @@ knitr::include_graphics("images/UG-00_i0220.png")
 
 
 
-
-
-
+- [相机的裁切系数](https://bitmingw.com/2019/03/31/camera-crop-factor/)
+- [佳能R6短片视频裁切实际采样像素少于4K](https://www.bilibili.com/read/cv16759792/)
+- [R5/R6拍视频，你该选哪款？](https://www.sohu.com/a/406979942_669409)
 
