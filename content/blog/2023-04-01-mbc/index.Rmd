@@ -5,7 +5,7 @@ date: '2023-04-01'
 slug: mbc
 categories: []
 tags: [实验]
-description: '郭李琦、薛奎、孔童瑶'
+description: '郭李琦，薛奎，孔童瑶'
 keywords: []
 link: ''
 
