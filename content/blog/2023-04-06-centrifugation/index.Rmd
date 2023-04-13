@@ -10,6 +10,10 @@ tags:
 description: '如果可以成长，那就多来几打这样的生活'
 keywords: []
 link: ''
+
+output:
+  blogdown::html_page
+    
 ---
 
 
@@ -44,14 +48,19 @@ link: ''
 这波只是开始。我说的“开始”指很多方面。
 
 
-现在我觉得，并不仅仅是“要把这件事做好”在支撑我。更重要的是，在我身陷困境的时候，他两让我知道，我并不是一个人……
+现在我觉得，并不仅仅是“要把这件事做好”在支撑我。更重要的是，在我身陷困境的时候，他两让我知道，我并不是一个人……\@ref(fig:shadows)
 
 
 
 
 ![](images/wx_20230407.jpg){width=100%}
 
+(ref:shadows) 仓库杂乱不堪，缺乏管理迟早会印证“破窗效应”。收拾了一番，分完样从仓库出来
 
+
+```{r shadows, echo=FALSE, out.width="80%", fig.cap='(ref:shadows)'}
+knitr::include_graphics("images/shadow_three.jpg")
+```
 
 
 
