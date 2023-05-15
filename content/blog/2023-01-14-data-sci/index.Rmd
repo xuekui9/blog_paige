@@ -15,11 +15,25 @@ output:
     number_sections: true
 ---
 
-```{r setyp, include=FALSE}
+```{r setup, include=FALSE}
 library(tidyverse)
 knitr::opts_chunk$set(warning=FALSE, message=FALSE, collapse=TRUE)
 ```
 
+
+Read a tab-separated file (.text) into R
+
+The key argument we should correctly specify is `sep`, and the way to present the tab character in R is to type `sep = "\t"`. The backslash is the escape character 转义符. It means the character following `\` is special. [See also](https://www.portfolioprobe.com/user-area/documentation/portfolio-probe-cookbook/data-basics/read-a-tab-separated-file-into-r/)
+
+The rows are seen as the duplicate as long as the frequency of elements in these rows is identical. How can we remove duplicate rows?
+
+```{r}
+df= tibble(x= c(0, 18, 4, 9, 88), y= c(4, 9, 0, 18, 40)) 
+df
+df %>% 
+  mutate(z= map2(x, y, ~ c(.x, .y) |> sort())) %>% 
+  distinct(z, .keep_all = TRUE)
+```
 
 
 

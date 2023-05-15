@@ -1,0 +1,43 @@
+---
+title: Error Propagation
+author: ''
+date: '2023-05-15'
+slug: error-propagation
+categories:
+  - statistics
+tags: []
+description: '解决一年半前的问题'
+keywords: []
+link: ''
+math: true
+---
+
+
+
+<p>虽然手头有一堆事压着没有什么进度，还是选择记录一手今天所解决的一个难题。<strong>误差传播问题</strong>。</p>
+<p>其实就是对变量的算术运算。对多个变量进行加减乘除、指数化对数化，得到计算后的值<span class="math inline">\(x\)</span>及对应的标准差<span class="math inline">\(s_x\)</span>。重要的是，计算<span class="math inline">\(s_x\)</span>时，要考虑各变量原有的不确定性，将这些不确定纳入公式得到一个准确的不确定性估计，即<span class="math inline">\(s_x\)</span>。</p>
+<p>假如<span class="math inline">\(x\)</span>是变量<span class="math inline">\(a, b, c\)</span>的函数：</p>
+<p><span class="math display">\[
+x = f(a, b, c)
+\]</span></p>
+<p>那么准确的误差传播公式是：</p>
+<p><span class="math display">\[
+s_x^2 = \left(\frac{\partial x}{\partial a}\right)^2 s_a^2 + \left(\frac{\partial x}{\partial b}\right)^2 s_b^2 + \left(\frac{\partial x}{\partial c}\right)^2 s_c^2
+\]</span></p>
+<p><strong>求出公式中的偏导项，即可得到方差</strong><span class="math inline">\(s_x^2\)</span>。</p>
+<p>公式只是公式。重要的是，没想到埋在心里的问题，在一年半后的这样一个时间点，得到了解决，未曾遗忘。于是，起飞~</p>
+<ul>
+<li><a href="https://chem.libretexts.org/Bookshelves/Analytical_Chemistry/Supplemental_Modules_(Analytical_Chemistry)/Quantifying_Nature/Significant_Digits/Propagation_of_Error?bc=0">Propagation of Error</a></li>
+<li><a href="https://terpconnect.umd.edu/~toh/models/ErrorPropagation.pdf">Error Propagation in Arithmetic Calculations</a></li>
+<li><a href="https://foothill.edu/psme/daley/tutorials_files/10.%20Error%20Propagation.pdf">10. Error Propagation tutorial.doc</a></li>
+<li><a href="https://www.ucl.ac.uk/~ucfbpve/geotopes/indexch10.html#x14-40005r3">Chapter 10 Error propagation</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/475135538">Error Propagation 误差传播相关知识</a></li>
+</ul>
+<p>列几条关于误差传播的资料。以上。</p>
+<p>砂完后我们仨走在去往主楼的路上，正对着晚霞，天还没有黑。路灯正好在两颗樟子松中间，光照亮着，显得格外好看。我当时怎么没有停下来拍张照呢。</p>
+<p><img src="images/ww_20230515223747J.jpg" style="width:100.0%" />
+<img src="images/w_20230515223729.jpg" style="width:100.0%" /></p>
+<p>哲旗已经在想着他毕业时候的日子了。姜Sir说他实验还没开始做，然后就想着毕业了哈哈哈哈。稠李的叶、丁香的花、还有主东门口两侧的蒙古栎，都在放肆地盛大，每天过得忙忙碌碌，来不及去感受。</p>
+<p>时间过得真快，他们都来这一年了。</p>
+<p><img src="images/w_20230515223738.jpg" style="width:100.0%" />
+<img src="images/w_20230515223755.jpg" style="width:100.0%" /></p>

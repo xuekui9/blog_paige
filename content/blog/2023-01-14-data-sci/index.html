@@ -29,6 +29,28 @@ output:
 </ul>
 </div>
 
+<p>Read a tab-separated file (.text) into R</p>
+<p>The key argument we should correctly specify is <code>sep</code>, and the way to present the tab character in R is to type <code>sep = "\t"</code>. The backslash is the escape character 转义符. It means the character following <code>\</code> is special. <a href="https://www.portfolioprobe.com/user-area/documentation/portfolio-probe-cookbook/data-basics/read-a-tab-separated-file-into-r/">See also</a></p>
+<p>The rows are seen as the duplicate as long as the frequency of elements in these rows is identical. How can we remove duplicate rows?</p>
+<pre class="r"><code>df= tibble(x= c(0, 18, 4, 9, 88), y= c(4, 9, 0, 18, 40)) 
+df
+## # A tibble: 5 × 2
+##       x     y
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1     0     4
+## 2    18     9
+## 3     4     0
+## 4     9    18
+## 5    88    40
+df %&gt;% 
+  mutate(z= map2(x, y, ~ c(.x, .y) |&gt; sort())) %&gt;% 
+  distinct(z, .keep_all = TRUE)
+## # A tibble: 3 × 3
+##       x     y z        
+##   &lt;dbl&gt; &lt;dbl&gt; &lt;list&gt;   
+## 1     0     4 &lt;dbl [2]&gt;
+## 2    18     9 &lt;dbl [2]&gt;
+## 3    88    40 &lt;dbl [2]&gt;</code></pre>
 <div id="分组操作" class="section level1" number="1">
 <h1><span class="header-section-number">1</span> 分组操作</h1>
 <p>对数据框进行分组，并添加组号</p>
@@ -63,7 +85,7 @@ df
 ##  8 com_008       428    262    226       436       499       308
 ##  9 com_009       327    494    244       316       368       401
 ## 10 com_010       480    343    495       383       471       387
-## # … with 28 more rows
+## # ℹ 28 more rows
 df= df %&gt;% 
   pivot_longer(-1, names_pattern = &quot;(.*)_&quot;, names_to = c(&quot;.value&quot;)) %&gt;% 
   pivot_longer(-1, names_to = &quot;trt&quot;, values_to = &quot;val&quot;)
@@ -81,26 +103,26 @@ df
 ##  8 com_002    control   457
 ##  9 com_002    case      372
 ## 10 com_002    control   324
-## # … with 218 more rows
+## # ℹ 218 more rows
 df %&gt;% 
   group_by(compoundID) %&gt;% 
   t_test(val ~ trt, detailed = TRUE)
 ## # A tibble: 38 × 16
-##    compoundID estimate estimate1 estim…¹ .y.   group1 group2    n1    n2 stati…²
-##  * &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt; &lt;int&gt;   &lt;dbl&gt;
-##  1 com_001     -100         302.    402. val   case   contr…     3     3 -0.994 
-##  2 com_002     -125.        266.    391  val   case   contr…     3     3 -1.91  
-##  3 com_003     -222.        230.    452  val   case   contr…     3     3 -3.25  
-##  4 com_004     -201.        254.    455  val   case   contr…     3     3 -2.46  
-##  5 com_005     -112         328.    440. val   case   contr…     3     3 -1.71  
-##  6 com_006     -110         309     419  val   case   contr…     3     3 -1.12  
-##  7 com_007     -115         260.    375. val   case   contr…     3     3 -1.72  
-##  8 com_008     -109         305.    414. val   case   contr…     3     3 -1.30  
-##  9 com_009       -6.67      355     362. val   case   contr…     3     3 -0.0859
-## 10 com_010       25.7       439.    414. val   case   contr…     3     3  0.456 
-## # … with 28 more rows, 6 more variables: p &lt;dbl&gt;, df &lt;dbl&gt;, conf.low &lt;dbl&gt;,
-## #   conf.high &lt;dbl&gt;, method &lt;chr&gt;, alternative &lt;chr&gt;, and abbreviated variable
-## #   names ¹​estimate2, ²​statistic</code></pre>
+##    compoundID estimate estimate1 estimate2 .y.   group1 group2     n1    n2
+##  * &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;  &lt;chr&gt;   &lt;int&gt; &lt;int&gt;
+##  1 com_001     -100         302.      402. val   case   control     3     3
+##  2 com_002     -125.        266.      391  val   case   control     3     3
+##  3 com_003     -222.        230.      452  val   case   control     3     3
+##  4 com_004     -201.        254.      455  val   case   control     3     3
+##  5 com_005     -112         328.      440. val   case   control     3     3
+##  6 com_006     -110         309       419  val   case   control     3     3
+##  7 com_007     -115         260.      375. val   case   control     3     3
+##  8 com_008     -109         305.      414. val   case   control     3     3
+##  9 com_009       -6.67      355       362. val   case   control     3     3
+## 10 com_010       25.7       439.      414. val   case   control     3     3
+## # ℹ 28 more rows
+## # ℹ 7 more variables: statistic &lt;dbl&gt;, p &lt;dbl&gt;, df &lt;dbl&gt;, conf.low &lt;dbl&gt;,
+## #   conf.high &lt;dbl&gt;, method &lt;chr&gt;, alternative &lt;chr&gt;</code></pre>
 <p>根据cyl列可将数据分为3组，分组修改数据框，使用<code>group_modify</code></p>
 <blockquote>
 <p>group_modify() returns a grouped tibble. In that case .f must return a data frame.</p>
@@ -188,7 +210,7 @@ economics %&gt;%
 ##  8  1968 2月  534.
 ##  9  1968 3月  544.
 ## 10  1968 4月  544 
-## # … with 564 more rows</code></pre>
+## # ℹ 564 more rows</code></pre>
 </div>
 <div id="同时操作多列" class="section level1" number="2">
 <h1><span class="header-section-number">2</span> 同时操作多列</h1>
