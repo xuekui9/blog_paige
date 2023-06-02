@@ -2,11 +2,13 @@
 <script>
   MathJax = {
     tex: {
-      inlineMath: [["$", "$"], ['\\(', '\\)']],
-      displayMath: [["$$", "$$"], ["\\[", "\\]"]]
+      inlineMath: [["$", "$"], ['\\(', '\\)']], 
     },
+    displayMath: [
+      ["$$", "$$"], ["\[\[", "\]\]"],
+    ],
     svg: {
-      fontCache: "global"
+      fontCache: "global",
     },
   };
 </script>
@@ -14,7 +16,9 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
 <script 
-  type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  type="text/javascript" 
+  id="MathJax-script" 
+  async
+  src="https://cdn.bootcdn.net/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
 </script>
 {{ end }}
