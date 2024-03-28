@@ -16,7 +16,7 @@ output:
 ---
 
 
-OpenAI已买下ai.com域名，输入[ai.com](ai.com)链接跳转至Chat GPT登录界面。
+
 
 
 
