@@ -19,7 +19,6 @@ output:
 
 
 
-
 # 注册VPN
 
 1. 下载[八方云VPN](https://xn--9kq52et30a.com/)：使用文档 -> Clash for windows使用教程 -> 蓝奏网盘下载 (Figure \@ref(fig:clashvpn))；

@@ -1,8 +1,9 @@
 ---
 title: Convert ppm to respiration
 author: ''
-date: '2024-02-14'
+date: '2023-02-14'
 categories: []
+slug: convert-ppm
 tags:
   - ecology
 description: ''
@@ -10,7 +11,6 @@ keywords: []
 link: ''
 math: true
 ---
-
 
 
 刚进实验室那会儿为了解决这个问题就费了一番周折，跟师姐。我以为我搞懂了。我觉得是一个非常重要的问题，理解却捉襟见肘，经不起细究。
