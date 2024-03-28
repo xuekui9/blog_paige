@@ -37,38 +37,34 @@ math: true
 [ppm单位换算_ppm换算成mg/m3](http://www.szwandi.cn/news/2638)
 
 
-**经仪器测得，时间段t内CO~2~的浓度增加了x ppm。培养瓶的顶空体积为V (mL)，培养的样品质量为m。如何计算这段时间的土壤呼吸速率？**
+**经仪器测得，时间段t内CO~2~的浓度增加了a ppm。培养瓶的顶空体积为V (mL)，培养的样品质量为m。如何计算这段时间的土壤呼吸速率？**
 
 
 体积浓度表示法：**一百万体积**的空气中所含气体的体积数，即ppm；那么：
 
-$$ppm = \frac{1}{10^6}  = \frac{1cm^3}{1m^3} = \frac{1\mu L}{1L}$$
+$$C = 1 \ ppm = \frac{1}{10^6}  = \frac{1cm^3}{1m^3} = \frac{1\ µ\text{L}}{1\ \text{L}} = \frac{10^{-3}\ µ\text{L}}{1\ \text{mL}}$$
 
-1. 假设气体浓度变化了**x (ppm)**，那么：
-
-$$x \ ppm  =  \frac{x \ \mu L}{1L} = x (\frac{\mu L}{L})$$
-
-
-以上的结果中，单位$\mu L/L$ 指代的是在某一时间段内，**单位体积，气体的体积变化了$x (\mu L)$。**
+以上，单位$10^{-3}µ\text{L}/\text{mL}$ 指代的是在某一时间段内，单位体积（1mL）中的气体体积为**$10^{-3}$µL**。
 
 
 
-2. 假如培养瓶顶空的体积为$V (mL)$，那么在这段时间，**培养瓶中气体体积改变了多少？**
+1. 假设培养后气体浓度变化了**a (ppm)**，培养瓶顶空的体积为$V$ (mL)，那么在这段时间，**培养瓶中气体体积改变了多少？**：
 
-$$x \ ppm * V  = \frac{x V}{10^3}(\mu L)$$
-
-由于$n = \frac{V}{V_m} = \frac{V}{22.4}$， 可计算出**培养瓶中气体，物质的量变化了：**
-
-$$\frac{x \ ppm * V }{22.4} = \frac{x V}{10^3 * 22.4}(\mu mol)$$
-
-物质的量乘以摩尔质量，可得到**培养瓶中气体质量的变化：**
-
-$$\frac{x \ ppm * V *M}{22.4} = \frac{x V M}{10^3 * 22.4}(\mu g) = \frac{x V M}{10^6 * 22.4}(mg)$$
+$$\Delta V = \Delta C \times V =  a \ ppm \times V = 10^{-3} a V \ (µ\text{L}) = 10^{-6}aV \  (\text{mL})$$
 
 
-3. **最后计算单位时间单位土壤，土壤呼吸排出了多少质量的气体？**
+2. 由于$n = \frac{V}{V_m} = \frac{V}{22.4}$， 可计算出**培养瓶中气体，物质的量变化了：**
 
-$$\frac{x V M}{10^6 * 22.4 * t * m} (mg  \ g \ soil^{-1} \  h^{-1}) = \frac{1}{10^6}\frac{x}{t} \frac{V}{22.4} \frac{M}{m}$$
+$$n = \frac{\Delta V }{22.4} = \frac{\Delta C \times V }{22.4} = \frac{a \ ppm \times V }{22.4} = \frac{10^{-6}a V \ (\text{mL})}{22.4\ (\text{L/mol})}\left[\text{m mol}\right]$$
 
-其中时间段t单位为h；培养的土壤样品质量为m
+3. 物质的量乘以摩尔质量，可得到**培养瓶中气体质量的变化：**
+
+$$m = n \times M = \frac{\Delta V}{22.4}\times M =   \frac{\Delta C \times V \times M}{22.4} = \frac{10^{-6} aVM}{22.4}(\text{mg})$$
+
+
+4. **最后计算单位时间、单位土壤，土壤呼吸排出了多少质量的气体？**，其中培养时间单位h，土样质量单位g。
+
+$$R_s\ (\text{mg g soil}^{-1}\ \text{h}^{-1}) = \frac{\Delta C\times V \times M}{10^6 \times 22.4 \times t \times m}  = \frac{1}{10^6}\frac{\Delta C}{t} \frac{V}{22.4} \frac{M}{m}$$
+
+
 
