@@ -1,8 +1,7 @@
 ---
 title: Convert ppm to respiration
 author: ''
-date: '2023-02-14'
-slug: convert-ppm
+date: '2024-02-14'
 categories: []
 tags:
   - ecology
@@ -41,7 +40,7 @@ math: true
 
 $$C = 1 \ ppm = \frac{1}{10^6}  = \frac{1cm^3}{1m^3} = \frac{1\ µ\text{L}}{1\ \text{L}} = \frac{10^{-3}\ µ\text{L}}{1\ \text{mL}}$$
 
-以上，单位$10^{-3}µ\text{L}/\text{mL}$ 指代的是在某一时间段内，单位体积（1mL）中的气体体积为**$10^{-3}$µL**。
+以上，单位$10^{-3}µ\text{L}/\text{mL}$ 指代的是在某一时间段内，单位体积（1mL）中的气体体积为$10^{-3}$µL。
 
 
 
