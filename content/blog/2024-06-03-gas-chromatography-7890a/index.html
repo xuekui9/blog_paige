@@ -1,0 +1,108 @@
+---
+title: Gas chromatography 7890A
+author: Package Build
+date: '2024-06-03'
+slug: gc7890
+categories: []
+tags:
+  - 实验
+description: ''
+keywords: []
+link: ''
+
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+    
+---
+
+
+<div id="TOC">
+<ul>
+<li><a href="#气相色谱" id="toc-气相色谱"><span class="toc-section-number">1</span> 气相色谱</a>
+<ul>
+<li><a href="#耗材" id="toc-耗材"><span class="toc-section-number">1.1</span> 耗材</a></li>
+<li><a href="#气体柜" id="toc-气体柜"><span class="toc-section-number">1.2</span> 气体柜</a></li>
+<li><a href="#氢气发生器及气泵" id="toc-氢气发生器及气泵"><span class="toc-section-number">1.3</span> 氢气发生器及气泵</a></li>
+<li><a href="#仪器主机" id="toc-仪器主机"><span class="toc-section-number">1.4</span> 仪器主机</a></li>
+<li><a href="#电脑" id="toc-电脑"><span class="toc-section-number">1.5</span> 电脑</a></li>
+<li><a href="#测气" id="toc-测气"><span class="toc-section-number">1.6</span> 测气</a>
+<ul>
+<li><a href="#标气" id="toc-标气"><span class="toc-section-number">1.6.1</span> 标气</a></li>
+<li><a href="#结果" id="toc-结果"><span class="toc-section-number">1.6.2</span> 结果</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#关机" id="toc-关机"><span class="toc-section-number">2</span> 关机</a></li>
+</ul>
+</div>
+
+<div id="气相色谱" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> 气相色谱</h1>
+<div id="耗材" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> 耗材</h2>
+<p>载气</p>
+<ul>
+<li>N2，用于CO2及CH4测定，200元/瓶；</li>
+<li>氩/甲烷，用于N2O测定，1k-2k间；</li>
+</ul>
+<p>标气</p>
+<ul>
+<li>CO2/CH4/N2O混合标气，3k每瓶，可用1年多；</li>
+</ul>
+</div>
+<div id="气体柜" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> 气体柜</h2>
+<p>气体柜中包括气瓶阀，进气阀，排气阀。两个钢瓶分别为N2、氩甲烷。</p>
+<p>打开钢瓶总阀门前，为避免钢瓶内气压对进气阀造成冲击，应先打开进气阀（逆时针拧到底），再打开气瓶阀（拧两三下）。</p>
+<p>钢瓶满压时指针约15，不到1格时更换气瓶。流速阀不用动，已调好。</p>
+</div>
+<div id="氢气发生器及气泵" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> 氢气发生器及气泵</h2>
+<p>打开氢气发生器身后开关，打开气泵开关。</p>
+<ul>
+<li>氢气发生器的水位，缺水时加入去离子水；</li>
+<li>及时更换氢气发生器后部及与气泵连接的的干燥剂；</li>
+</ul>
+</div>
+<div id="仪器主机" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> 仪器主机</h2>
+<p>首先打开7890总开关，然后：</p>
+<p>Yes或No按键调整开关状态。</p>
+<ol style="list-style-type: decimal">
+<li>Oven。柱箱（开，温度会逐渐升至55）；</li>
+<li>Front Det，前检测器用于测CH4/CO2。温度（开，预热升至250）；H2（开，45），空气流量（开，升至400），尾吹气（关）；火焰（开），一般会自动开，如果闪烁先关闭再手动打开，如果不闪烁手动打开；</li>
+<li>Back Det，后检测器用于测N2O。温度（开，330）；尾吹气（开）；</li>
+<li>Aux Temp，辅助温度。温度（一定开，375）；</li>
+</ol>
+</div>
+<div id="电脑" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> 电脑</h2>
+<p>经常打开，不用关机。桌面软件为“仪器1 联机”。如果电脑与7890连接后，7890箱体上Remote指示灯为橙色。</p>
+</div>
+<div id="测气" class="section level2" number="1.6">
+<h2><span class="header-section-number">1.6</span> 测气</h2>
+<p>调整7890至Time界面。（按照需求）依次往不同进气口，分别注射6mL气体（范围5-10mL）。然后按7890箱体上的“Start”，Time界面即开始倒计时5分钟。</p>
+<div id="标气" class="section level3" number="1.6.1">
+<h3><span class="header-section-number">1.6.1</span> 标气</h3>
+<p>标气气瓶要格外注意，确保气瓶总阀处于关闭状态，将注射器与三通阀连接。首先要沿Decrease方向转动减压阀（关闭），再拧开气瓶总阀，这个时候一点一点Increase减压阀，慢慢地会感觉到有阻尼感，再慢慢一点一点Increase，标气会进入注射器。然后反方向拧动关闭减压阀。</p>
+<p>通常前两管标气中混有空气不准，打到空气中丢掉。</p>
+<p>重新再采集一定体积的标气，Decrease关闭减压阀，关闭气瓶阀。</p>
+<p>一般先打3次标气，3次结果CV要小于0.01。通过后，再开始正式测气。</p>
+</div>
+<div id="结果" class="section level3" number="1.6.2">
+<h3><span class="header-section-number">1.6.2</span> 结果</h3>
+<p>不论标气还是样品气，均记录结果中的峰面积用于计算。</p>
+<ul>
+<li>CH4。（前部）时间1.1左右的数据行所对应的峰面积。</li>
+<li>CO2。（前部）时间3.8左右的数据行所对应的峰面积。</li>
+<li>N2O。（后部）时间xxx左右的数据行所对应的峰面积。</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="关机" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> 关机</h1>
+<p>关掉Oven，Front Det，Back Det及Aux Temp中之间打开的选项。因为Aux Temp中温度降的比较慢，一般降至50度以下时，就可以关闭气相色谱。</p>
+<p>关闭氢气发生器。关闭钢瓶阀以及进气阀。电脑不关。</p>
+</div>
