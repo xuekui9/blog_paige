@@ -28,14 +28,13 @@
         
         
         <!-- the css style hosted in CDN -->
-        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" rel="stylesheet">
         
-        
+        <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/bootstrap/5.2.0/css/bootstrap.min.css" integrity="sha512-XWTTruHZEYJsxV3W/lSXG1n3Q39YIWOstqvmFsdNEEQfHoZ6vm6E9GK2OrF6DSJSpIbRbi+Nn0WDPID9O7xB2Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         
         <!-- Highlight.js -->
         
-        <link href="https://cdn.staticfile.org/highlight.js/11.6.0/styles/base16/papercolor-light.min.css" rel="stylesheet">
-        <script src="https://cdn.staticfile.org/highlight.js/11.6.0/highlight.min.js"></script>
+        <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/highlight.js/11.6.0/styles/base16/papercolor-light.min.css" integrity="sha512-+QY7lqqRZmz/48bBGgpk0mHX8iKd6qVqjRsDkLhdvRj5pXf+GnJ1iOTPs3iysCRUn0poD0IMu8XRqYblXh+THQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.6.0/highlight.min.js" integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>hljs.initHighlightingOnLoad();</script>
         
         
@@ -61,9 +60,10 @@
 
 
         <link rel="icon" type="image/x-icon" href="/favicon.ico" >
+        
+        
+        <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.css" integrity="sha512-ywmPbuxGS4cJ7GxwCX+bCJweeext047ZYU2HP52WWKbpJnF4/Zzfr2Bo19J4CWPXZmleVusQ9d//RB5bq0RP7w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-        <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" rel="stylesheet">
         
         
         {{ range .AlternativeOutputFormats }}
@@ -111,7 +111,7 @@
             </footer>
             {{ end }}
         </div>
-        <script crossorigin="anonymous" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://s4.zstatic.net/ajax/libs/bootstrap/5.2.0/js/bootstrap.bundle.min.js" integrity="sha512-9GacT4119eY3AcosfWtHMsT5JyZudrexyEVzTBWV3viP/YfB9e2pEy3N7WXL3SV6ASXpTU0vzzSxsbfsuUH4sQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         {{ if .Site.GoogleAnalytics }}
         {{ template "_internal/google_analytics.html" . }}
         {{ end }}
