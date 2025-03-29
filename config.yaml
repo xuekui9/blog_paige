@@ -1,7 +1,12 @@
-author:
-  email: wsgwhym@163.com
-  name: Kui Xue
-baseurl: https://xuekui.site
+params:
+  author: 
+    email: wsgwhym@163.com
+    name: Kui Xue
+    baseurl: https://xuekui.site
+  social:
+    envelope: mailto:wsgwhym@163.com
+    github: https://github.com/xuekui9
+    twitter: https://twitter.com/xuekui9
 copyright: 
   © Kui Xue. 
   Powered by the [paige theme](https://github.com/willfaught/paige)
@@ -49,13 +54,11 @@ menu:
     name: Tags
     weight: 70
     url: /tags/
-paginate: 30
+pagination:
+  pagerSize: 30
 permalinks:
   blog: /blog/:year/:month/:slug/
-social:
-  envelope: mailto:wsgwhym@163.com
-  github: https://github.com/xuekui9
-  twitter: https://twitter.com/xuekui9
+
 theme: paige
 timezone: Asia/Shanghai
 title: Kui Xue丨薛奎

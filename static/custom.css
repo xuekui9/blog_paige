@@ -26,12 +26,6 @@ pre code {
 
 
 
-h2, h3, h4 {
-  color: #0085bd;
-  font-weight: bold;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
 
 
 
@@ -60,15 +54,15 @@ a:hover {
 
 /* 导航栏的链接样式 */
 .nav-pills .nav-link.active {
-  background-color: #0085bd;
+  background-color: #9a0aaa;
   text-decoration: none;
 }
 .nav-link{
-  color: #0085bd;
+  color: #008;
 }
 .nav-link:hover {
   text-decoration: none;
-  color: #0085bd;
+  color: #008;
 }
 
 
@@ -78,7 +72,7 @@ a:hover {
 body {
   padding: 1em;
   line-height: 1.75em;
-  font-size: 18px;
+  font-size: 16px;
   margin: auto;  /* 整个网页页面的外边距 */
   /* text-align:justify; */
 }
@@ -95,14 +89,6 @@ blockquote {
 
 
 
-
-
-
-.body-p h1{
-  color: #0085bd;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
 
 
 .body-p p{

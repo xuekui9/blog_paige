@@ -3,14 +3,70 @@ title: Convert ppm to respiration
 author: ''
 date: '2023-02-14'
 categories: []
-slug: convert-ppm
+slug: flux-calc
 tags:
   - ecology
 description: ''
 keywords: []
 link: ''
 math: true
+
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+
 ---
+
+更新于2025年3月28日
+
+
+# 浓度变化速率
+
+## 啊啊
+
+### 啊啊啊
+
+
+ppm定义：**一百万体积**的空气中所含气体的体积数（体积浓度表示法）
+
+通常公式中最常见的项$\frac{dc}{dt}$，即浓度变化速率。直白地，其单位为$ppm\ h^{-1}$。根据ppm定义，其可以改写为$\mu mol\  mol^{-1}\ h^{-1}$，即单位时间每摩尔的空气中，目标气体浓度变化了多少微摩尔。
+
+a aa 
+
+# 气体密度
+
+首先计算培养瓶的气体密度
+
+$$PV = nRT$$
+
+标况下，有：
+
+$$P_0V_m = RT_0$$
+
+
+各项单位分别为
+
+- P，kPa；标准大气压为101.325
+- V，L；标况下，气体摩尔体积为22.4
+- n，mol  
+- T，K；273.15
+
+
+
+$$\rho = \frac{n}{V} = \frac{P}{RT} (mol \cdot L)$$
+根据以上，气体密度随压强和温度而变，但往往都忽略压强的变化，所以这里也做简化，将P当作P0看待。
+
+则有：
+
+$$\rho = \frac{n}{V} = \frac{\frac{RT_0}{V_m}}{RT} = \frac{T_0}{22.4\times T}$$
+
+上述计算培养瓶顶空气体密度，将其乘以顶空体积V(L)，得到顶空气体摩尔数
+
+
+$$n = \rho V = \frac{T_0 V}{22.4\times T}$$
+dc单位为ppm，等价为$(\mu mol \cdot mol^{-1})$
+
 
 
 刚进实验室那会儿为了解决这个问题就费了一番周折，跟师姐。我以为我搞懂了。我觉得是一个非常重要的问题，理解却捉襟见肘，经不起细究。

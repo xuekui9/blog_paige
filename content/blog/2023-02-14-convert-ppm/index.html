@@ -3,24 +3,79 @@ title: Convert ppm to respiration
 author: ''
 date: '2023-02-14'
 categories: []
-slug: convert-ppm
+slug: flux-calc
 tags:
   - ecology
 description: ''
 keywords: []
 link: ''
 math: true
+
+output:
+  blogdown::html_page:
+    toc: true
+    number_sections: true
+
 ---
 
 
+<div id="TOC">
+<ul>
+<li><a href="#浓度变化速率" id="toc-浓度变化速率"><span class="toc-section-number">1</span> 浓度变化速率</a>
+<ul>
+<li><a href="#啊啊" id="toc-啊啊"><span class="toc-section-number">1.1</span> 啊啊</a>
+<ul>
+<li><a href="#啊啊啊" id="toc-啊啊啊"><span class="toc-section-number">1.1.1</span> 啊啊啊</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#气体密度" id="toc-气体密度"><span class="toc-section-number">2</span> 气体密度</a>
+<ul>
+<li><a href="#土壤呼吸速率的计算" id="toc-土壤呼吸速率的计算"><span class="toc-section-number">2.1</span> 土壤呼吸速率的计算</a></li>
+</ul></li>
+</ul>
+</div>
 
+<p>更新于2025年3月28日</p>
+<div id="浓度变化速率" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> 浓度变化速率</h1>
+<div id="啊啊" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> 啊啊</h2>
+<div id="啊啊啊" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> 啊啊啊</h3>
+<p>ppm定义：<strong>一百万体积</strong>的空气中所含气体的体积数（体积浓度表示法）</p>
+<p>通常公式中最常见的项<span class="math inline">\(\frac{dc}{dt}\)</span>，即浓度变化速率。直白地，其单位为<span class="math inline">\(ppm\ h^{-1}\)</span>。根据ppm定义，其可以改写为<span class="math inline">\(\mu mol\  mol^{-1}\ h^{-1}\)</span>，即单位时间每摩尔的空气中，目标气体浓度变化了多少微摩尔。</p>
+<p>a aa</p>
+</div>
+</div>
+</div>
+<div id="气体密度" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> 气体密度</h1>
+<p>首先计算培养瓶的气体密度</p>
+<p><span class="math display">\[PV = nRT\]</span></p>
+<p>标况下，有：</p>
+<p><span class="math display">\[P_0V_m = RT_0\]</span></p>
+<p>各项单位分别为</p>
+<ul>
+<li>P，kPa；标准大气压为101.325</li>
+<li>V，L；标况下，气体摩尔体积为22.4</li>
+<li>n，mol<br />
+</li>
+<li>T，K；273.15</li>
+</ul>
+<p><span class="math display">\[\rho = \frac{n}{V} = \frac{P}{RT} (mol \cdot L)\]</span>
+根据以上，气体密度随压强和温度而变，但往往都忽略压强的变化，所以这里也做简化，将P当作P0看待。</p>
+<p>则有：</p>
+<p><span class="math display">\[\rho = \frac{n}{V} = \frac{\frac{RT_0}{V_m}}{RT} = \frac{T_0}{22.4\times T}\]</span></p>
+<p>上述计算培养瓶顶空气体密度，将其乘以顶空体积V(L)，得到顶空气体摩尔数</p>
+<p><span class="math display">\[n = \rho V = \frac{T_0 V}{22.4\times T}\]</span>
+dc单位为ppm，等价为<span class="math inline">\((\mu mol \cdot mol^{-1})\)</span></p>
 <p>刚进实验室那会儿为了解决这个问题就费了一番周折，跟师姐。我以为我搞懂了。我觉得是一个非常重要的问题，理解却捉襟见肘，经不起细究。</p>
 <p>在草纸上重复写着分式和推导过程，写了一天。更困惑了</p>
 <p>和姜师兄讨论用另一条思路讲的，虽然讲的磕磕绊绊，但明显更容易理解。第一条思路绕来绕去，实在看不下去了，一点都不简洁和顺畅。</p>
 <p>哈尔滨的妖风，和兴路的拥堵，还有让楠姐期待的“有滋有味小菜馆”……</p>
 <p>终于理出了思路，终于解决了。</p>
-<div id="土壤呼吸速率的计算" class="section level2">
-<h2>土壤呼吸速率的计算</h2>
+<div id="土壤呼吸速率的计算" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> 土壤呼吸速率的计算</h2>
 <p><a href="http://www.szwandi.cn/news/2638">ppm单位换算_ppm换算成mg/m3</a></p>
 <p><strong>经仪器测得，时间段t内CO<sub>2</sub>的浓度增加了a ppm。培养瓶的顶空体积为V (mL)，培养的样品质量为m。如何计算这段时间的土壤呼吸速率？</strong></p>
 <p>体积浓度表示法：<strong>一百万体积</strong>的空气中所含气体的体积数，即ppm；那么：</p>
@@ -42,4 +97,5 @@ math: true
 <li><strong>最后计算单位时间、单位土壤，土壤呼吸排出了多少质量的气体？</strong>，其中培养时间单位h，土样质量单位g。</li>
 </ol>
 <p><span class="math display">\[R_s\ (\text{mg g soil}^{-1}\ \text{h}^{-1}) = \frac{m}{t \times m_\text{soil} } = \frac{n \times M}{t \times m_\text{soil}}  = \frac{10^{-6} \times \Delta C\times V \times M}{22.4 \times t \times m_\text{soil}}  = \frac{1}{10^6}\frac{\Delta C}{t} \frac{V}{22.4} \frac{M}{m_\text{soil}}\]</span></p>
+</div>
 </div>
